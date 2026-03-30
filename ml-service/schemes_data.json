@@ -1,0 +1,1526 @@
+[
+    {
+        "id": "pm-kisan",
+        "name": "Agricultural Income Subsidy (PM-KISAN)",
+        "description": "Direct income support and primary agricultural subsidy of Rs. 6,000 per year to farmer families.",
+        "authority": "Ministry of Agriculture & Farmers Welfare",
+        "category": "Subsidy",
+        "benefits": {
+            "amount": "Rs. 6,000 per year",
+            "installments": "Three equal payments of Rs. 2,000 every four months",
+            "delivery": "Direct Benefit Transfer (DBT) to bank accounts"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All"
+            ]
+        },
+        "requirements": [
+            "Aadhaar",
+            "Land Records",
+            "Bank Account"
+        ],
+        "link": "https://pmkisan.gov.in/",
+        "keywords": "money, cash, fund, seed, fertilizer, income support, financial help, 6000, installment, subsidy",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "pmksy",
+        "name": "Irrigation Subsidy (PMKSY)",
+        "description": "Major irrigation subsidy focusing on achieving 'Har Khet Ko Pani' (water for every field) by enhancing irrigation coverage.",
+        "authority": "Ministry of Agriculture & Farmers Welfare",
+        "category": "Subsidy",
+        "benefits": {
+            "subsidy": "Up to 55% for small/marginal farmers, 45% for others",
+            "systems": "Covers Drip and Sprinkler irrigation setup",
+            "impact": "Improves water use efficiency and significantly boosts crop yield"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All"
+            ]
+        },
+        "requirements": [
+            "Land Records",
+            "Aadhaar",
+            "Irrigation Quotation"
+        ],
+        "link": "https://pmksy.gov.in/",
+        "keywords": "water, drip, sprinkler, irrigation, pipe, subsidy, saving, yield, equipment",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "pm-kusum",
+        "name": "Solar Pump Subsidy (PM-KUSUM)",
+        "description": "Revolutionizing farm energy by providing up to 60% subsidy for solar-powered irrigation pumps.",
+        "authority": "Ministry of New and Renewable Energy",
+        "category": "Subsidy",
+        "benefits": {
+            "subsidy": "Up to 60% of the cost of solar pump",
+            "loan": "30% loan assistance available through banks",
+            "income": "Option to sell surplus solar power back to the grid"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All"
+            ]
+        },
+        "requirements": [
+            "Land Records",
+            "Aadhaar",
+            "Bank Account"
+        ],
+        "link": "https://pmkusum.mnre.gov.in/",
+        "keywords": "solar, pump, water, irrigation, pipe, electricity, energy, equipment, subsidy",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "nfsm",
+        "name": "Quality Seed & Input Subsidy (NFSM)",
+        "description": "Aims to increase productivity via subsidies for quality seeds, bio-fertilizers, and micronutrients.",
+        "authority": "Ministry of Agriculture & Farmers Welfare",
+        "category": "Subsidy",
+        "benefits": {
+            "seed_subsidy": "Financial assistance for high-yielding variety seeds",
+            "input_support": "Subsidies for bio-fertilizers, micronutrients, and soil health inputs",
+            "demonstrations": "Free field demonstrations and training for farmers"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All"
+            ]
+        },
+        "requirements": [
+            "Aadhaar",
+            "Land Records",
+            "Farmer ID Card"
+        ],
+        "link": "https://www.nfsm.gov.in/",
+        "keywords": "seed, fertilizer, grain, rice, wheat, pulses, subsidy, productivity, food security",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "pkvy",
+        "name": "Organic Farming Subsidy (PKVY)",
+        "description": "A flagship subsidy scheme to promote organic farming through cluster-based mobilization. It provides financial assistance of Rs. 50,000 per hectare.",
+        "authority": "Ministry of Agriculture & Farmers Welfare",
+        "category": "Subsidy",
+        "benefits": {
+            "amount": "Rs. 50,000 per hectare for 3 years",
+            "input_support": "Covers organic seeds, bio-fertilizers, and bio-pesticides",
+            "certification": "Includes PGS-India organic certification costs"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All"
+            ]
+        },
+        "requirements": [
+            "Aadhaar",
+            "Cluster Group Membership",
+            "Organic Pledge"
+        ],
+        "link": "https://pgsindia-ncof.gov.in/",
+        "keywords": "organic, bio, natural, toxin free, healthy, subsidy, certification, cluster",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "midh",
+        "name": "Horticulture Infrastructure Subsidy (MIDH)",
+        "description": "Focuses on horticulture sector growth, providing primary subsidies for polyhouses, greenhouses, and cold storage.",
+        "authority": "Ministry of Agriculture & Farmers Welfare",
+        "category": "Subsidy",
+        "benefits": {
+            "subsidy": "35% to 50% for high-tech infrastructure setup",
+            "infrastructure": "Polyhouses, Greenhouses, and Cold Storage",
+            "crops": "Fruits, vegetables, spices, and flowers"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All"
+            ]
+        },
+        "requirements": [
+            "Aadhaar",
+            "Land Records",
+            "Project Report",
+            "Bank Account"
+        ],
+        "link": "https://midh.gov.in/",
+        "keywords": "horticulture, fruit, vegetable, polyhouse, greenhouse, cold storage, garden, subsidy",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "pmfby-subsidy",
+        "name": "Crop Insurance Premium Subsidy (PMFBY)",
+        "description": "The Government of India pays up to 98% of the crop insurance premium as a direct subsidy to farmers.",
+        "authority": "Ministry of Agriculture & Farmers Welfare",
+        "category": "Subsidy",
+        "benefits": {
+            "premium_support": "Covers majority of the insurance cost",
+            "impact": "Protects against complete crop failure due to weather",
+            "access": "Mandatory for loanee farmers, optional for others"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All"
+            ]
+        },
+        "requirements": [
+            "Land Records",
+            "Adhaar"
+        ],
+        "link": "https://pmfby.gov.in/",
+        "keywords": "insurance, bima, subsidy, premium, support, safety",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "rkvy",
+        "name": "State Agricultural Project Subsidy (RKVY)",
+        "description": "Empowers states to develop programs with substantial subsidies for innovative farming and local infrastructure projects.",
+        "authority": "Ministry of Agriculture & Farmers Welfare",
+        "category": "Subsidy",
+        "benefits": {
+            "subsidy": "Up to 50% for capital intensive farm projects",
+            "flexibility": "States can design projects based on local farmer needs"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All"
+            ]
+        },
+        "requirements": [
+            "Project Report",
+            "Land Records",
+            "Aadhaar"
+        ],
+        "link": "https://rkvy.nic.in/",
+        "keywords": "rkvy, state, project, subsidy, development",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "shc",
+        "name": "Soil Health Card & Nutrient Subsidy (SHC)",
+        "description": "Promotes balanced fertilizer use by subsidizing soil testing and the purchase of recommended micro-nutrients.",
+        "authority": "Ministry of Agriculture & Farmers Welfare",
+        "category": "Subsidy",
+        "benefits": {
+            "testing": "Free soil testing and health card issuance",
+            "input_subsidy": "Assistance for recommended micro-nutrients"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All"
+            ]
+        },
+        "requirements": [
+            "Soil Sample",
+            "Aadhaar Card"
+        ],
+        "link": "https://soilhealth.dac.gov.in/",
+        "keywords": "soil, test, health card, fertilizer, subsidy",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "isam-subsidy",
+        "name": "Marketing Infrastructure Subsidy (ISAM)",
+        "description": "Provides back-ended capital subsidies for the creation of storage and mandi infrastructure.",
+        "authority": "Ministry of Agriculture & Farmers Welfare",
+        "category": "Subsidy",
+        "benefits": {
+            "subsidy": "25% to 33.33% of the capital cost",
+            "limit": "Up to Rs. 3 Crore for specific projects"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All"
+            ]
+        },
+        "requirements": [
+            "Project Report",
+            "Land Records"
+        ],
+        "link": "https://agmarknet.gov.in/",
+        "keywords": "marketing, storage, warehouse, subsidy",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "kcc",
+        "name": "Kisan Credit Card (KCC)",
+        "description": "The most vital credit scheme for farmers, providing timely access to short-term loans for crop cultivation and farm maintenance at subsidized interest rates.",
+        "authority": "RBI & NABARD",
+        "category": "Loan",
+        "benefits": {
+            "interest": "Effective 4% with prompt repayment",
+            "limit": "Flexible based on land and crop",
+            "card": "ATM-enabled RuPay debit card"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All farmers"
+            ]
+        },
+        "requirements": [
+            "Aadhaar",
+            "Land Records",
+            "KCC Application"
+        ],
+        "link": "https://www.myscheme.gov.in/schemes/kcc",
+        "keywords": "loan, credit, card, kcc, interest, bank",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "aif",
+        "name": "Agriculture Infrastructure Fund",
+        "description": "Long-term debt financing facility for investment in post-harvest management infrastructure and community farming assets.",
+        "authority": "Ministry of Agriculture & Farmers Welfare",
+        "category": "Loan",
+        "benefits": {
+            "subvention": "3% interest subvention for loans up to Rs. 2 Crore",
+            "tenure": "Repayment period up to 7 years"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All farmers",
+                "FPOs",
+                "SHGs"
+            ]
+        },
+        "requirements": [
+            "Project Report",
+            "KYC",
+            "Land Selection"
+        ],
+        "link": "https://agriinfra.dac.gov.in/",
+        "keywords": "loan, infrastructure, warehouse, cold storage, aif",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "miss",
+        "name": "Interest Subvention Scheme",
+        "description": "Ensures that short-term crop loans are available at an affordable interest rate. Banks get subvention, which is passed to farmers.",
+        "authority": "Ministry of Agriculture & Farmers Welfare",
+        "category": "Loan",
+        "benefits": {
+            "rate": "Subsidized interest rate on short-term credit",
+            "incentive": "3% additional subvention for prompt repayment"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All farmers"
+            ]
+        },
+        "requirements": [
+            "KCC Account"
+        ],
+        "link": "https://pib.gov.in/",
+        "keywords": "interest, subvention, loan, bank, miss",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "land-purchase",
+        "name": "Land Purchase Loan",
+        "description": "Assists small and marginal farmers in purchasing additional land to make their holdings more viable and productive.",
+        "authority": "Commercial & Cooperative Banks",
+        "category": "Loan",
+        "benefits": {
+            "tenure": "Long-term repayment (7-10 years)",
+            "purpose": "Acquisition of arable land for cultivation"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Small/Marginal Farmers"
+            ]
+        },
+        "requirements": [
+            "Sale Agreement",
+            "Valuation Report"
+        ],
+        "link": "https://www.sbi.co.in/",
+        "keywords": "land, buy, purchase, agricultural, loan",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "farm-mech",
+        "name": "Farm Mechanization Loan",
+        "description": "Credit for purchasing tractors, power tillers, and other high-value agricultural machinery to improve yield and efficiency.",
+        "authority": "All Commercial Banks",
+        "category": "Loan",
+        "benefits": {
+            "collateral": "Hypothecation of purchased machinery",
+            "margin": "Low margin (15-25%) requirements"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All farmers"
+            ]
+        },
+        "requirements": [
+            "Dealer Quotation",
+            "Land Records"
+        ],
+        "link": "https://www.bankofbaroda.in/",
+        "keywords": "tractor, machinery, equipment, loan, tools",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "produce-marketing",
+        "name": "Produce Pledge Loan",
+        "description": "Enables farmers to store produce in warehouses and get credit against receipts, avoiding harvest-time distress sales.",
+        "authority": "NABARD & Banks",
+        "category": "Loan",
+        "benefits": {
+            "credit": "Loan up to 75% of produce value",
+            "limit": "Up to Rs. 50 Lakh against receipt"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Farmers with stored produce"
+            ]
+        },
+        "requirements": [
+            "Warehouse Receipt",
+            "KCC"
+        ],
+        "link": "https://www.myscheme.gov.in/",
+        "keywords": "marketing, warehouse, receipt, pledge, loan",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "agri-gold-loan",
+        "name": "Gold Loan",
+        "description": "Quick credit option pledging gold ornaments for immediate agricultural needs at subsidized interest rates.",
+        "authority": "Commercial & Cooperative Banks",
+        "category": "Loan",
+        "benefits": {
+            "speed": "Instant disbursement within hours",
+            "interest": "Low agricultural interest rates (7-9%)"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All farmers with gold"
+            ]
+        },
+        "requirements": [
+            "Gold Ornaments",
+            "ID Proof"
+        ],
+        "link": "https://www.sbi.co.in/",
+        "keywords": "gold, loan, jewel, money, quick",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "horticulture-loan",
+        "name": "National Horticulture Board (NHB) Horticulture Loan",
+        "description": "Financial assistance for developmental projects in commercial horticulture, including production and post-harvest infra.",
+        "authority": "National Horticulture Board",
+        "category": "Loan",
+        "benefits": {
+            "subsidy": "Back-ended capital subsidy (35-50%)",
+            "focus": "High-value fruits and vegetables"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Horticulture Farmers"
+            ]
+        },
+        "requirements": [
+            "Project Report",
+            "Land Proof"
+        ],
+        "link": "https://nhb.gov.in/",
+        "keywords": "horticulture, fruit, vegetable, loan, nhb",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "acabc-loan",
+        "name": "Agri-Clinics and Agri-Business Centres (ACABC) Loan",
+        "description": "Loans for agri-graduates to start ventures like soil testing labs or machinery banks to support local farmers.",
+        "authority": "NABARD",
+        "category": "Loan",
+        "benefits": {
+            "subsidy": "36% (General) to 44% (SC/ST/Women)",
+            "amount": "Up to Rs. 20 Lakh for individuals"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Agri-graduates"
+            ]
+        },
+        "requirements": [
+            "Degree Proof",
+            "Project Report",
+            "Training Certificate"
+        ],
+        "link": "https://www.acabc.gov.in/",
+        "keywords": "startup, venture, business, loan, graduate",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "micro-irrigation-fund",
+        "name": "Micro Irrigation Fund",
+        "description": "Concessional loans to states for top-up subsidies on drip and sprinkler systems to expand micro-irrigation reach.",
+        "authority": "NABARD",
+        "category": "Loan",
+        "benefits": {
+            "extra_subsidy": "15-20% additional state subsidy pool",
+            "focus": "Expanding precision irrigation coverage"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All farmers via States"
+            ]
+        },
+        "requirements": [
+            "Irrigation Application",
+            "Land Proof"
+        ],
+        "link": "https://www.nabard.org/",
+        "keywords": "irrigation, water, fund, loan, nabard",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "pmfby-ins",
+        "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+        "description": "Flagship crop insurance scheme protecting against natural calamities, pests, and diseases for all major crops.",
+        "authority": "Ministry of Agriculture & Farmers Welfare",
+        "category": "Insurance",
+        "benefits": {
+            "coverage": "Protects against drought, flood, pests, and fire",
+            "premium": "Capped at 2% for Kharif and 1.5% for Rabi crops"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All farmers growing notified crops"
+            ]
+        },
+        "requirements": [
+            "Land Records",
+            "Sowing Certificate",
+            "Aadhaar"
+        ],
+        "link": "https://pmfby.gov.in/",
+        "keywords": "insurance, bima, claim, safety, crop protection",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "rwbcis",
+        "name": "Restructured Weather Based Crop Insurance (RWBCIS)",
+        "description": "Insurance based on weather parameters like rainfall, temperature, and wind speed rather than yield assessment.",
+        "authority": "Ministry of Agriculture",
+        "category": "Insurance",
+        "benefits": {
+            "fast_claim": "Automatic settlement based on weather station data",
+            "specificity": "Covers high heat, low rain, or sudden frost"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All farmers"
+            ]
+        },
+        "requirements": [
+            "Aadhaar",
+            "Land Detail"
+        ],
+        "link": "https://pmfby.gov.in/",
+        "keywords": "weather, rain, heat, insurance, bima, climate",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "upis",
+        "name": "Unified Package Insurance Scheme (UPIS)",
+        "description": "A composite insurance covering crop, household assets, cattle, and personal accident for a single premium.",
+        "authority": "Department of Agriculture",
+        "category": "Insurance",
+        "benefits": {
+            "all_in_one": "Safety for crop, tractor, and farmer family",
+            "convenience": "Single window for multiple protection needs"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Small and Marginal Farmers"
+            ]
+        },
+        "requirements": [
+            "KCC Details",
+            "Personal ID",
+            "Land documents"
+        ],
+        "link": "https://www.myscheme.gov.in/",
+        "keywords": "unified, package, insurance, bima, all-in-one",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "seed-ins",
+        "name": "Pilot Seed Crop Insurance Scheme",
+        "description": "Covers seed crop at various stages to compensate for losses during seed production stages.",
+        "authority": "DAC&FW",
+        "category": "Insurance",
+        "benefits": {
+            "specialized": "Focuses on the high risk of seed production",
+            "coverage": "Compensates for purity and germination failure"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Seed Growers"
+            ]
+        },
+        "requirements": [
+            "Seed Certification",
+            "Grower Agreement"
+        ],
+        "link": "https://agricoop.nic.in/",
+        "keywords": "seed, production, insurance, crop, breeder",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "cpis",
+        "name": "Coconut Palm Insurance Scheme (CPIS)",
+        "description": "Specifically designed for coconut growers to protect palms against natural disasters and pests.",
+        "authority": "Coconut Development Board",
+        "category": "Insurance",
+        "benefits": {
+            "per_tree": "Compensation based on the number of palms lost",
+            "protection": "Covers storm, lightning, and specific pests"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Coconut Farmers"
+            ]
+        },
+        "requirements": [
+            "Palm Count Proof",
+            "Land Detail"
+        ],
+        "link": "https://coconutboard.nic.in/",
+        "keywords": "coconut, tree, palm, insurance, bima, plantation",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "wheat-ins",
+        "name": "Index Based Crop Insurance (Wheat)",
+        "description": "Innovative insurance using satellite imagery and indices to detect wheat crop stress and trigger payouts.",
+        "authority": "State Governments",
+        "category": "Insurance",
+        "benefits": {
+            "hi_tech": "Uses remote sensing for accurate loss detection",
+            "fairness": "Eliminates manual survey errors in yield calculation"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Wheat Farmers"
+            ]
+        },
+        "requirements": [
+            "Geo-tagged Farm Info",
+            "Aadhaar"
+        ],
+        "link": "https://pmfby.gov.in/",
+        "keywords": "wheat, satellite, index, insurance, bima, smart",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "horti-ins",
+        "name": "Horticulture Yield Based Insurance",
+        "description": "Protects fruit crops like Mango, Citrus, and Grapes against yield variations and market failures.",
+        "authority": "Ministry of Agriculture",
+        "category": "Insurance",
+        "benefits": {
+            "high_value": "Coverage suitable for expensive plantation crops",
+            "pest_focus": "Specific terms for pest outbreaks in orchards"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Horticulture Farmers"
+            ]
+        },
+        "requirements": [
+            "Orchard Registration",
+            "Yield Record"
+        ],
+        "link": "https://midh.gov.in/",
+        "keywords": "fruit, mango, orchard, insurance, bima, horticulture",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "weather-index-ins",
+        "name": "Weather Index Based Compensation",
+        "description": "State-specific compensation for crops not covered under PMFBY, triggered by extreme weather events.",
+        "authority": "State Disaster Management",
+        "category": "Insurance",
+        "benefits": {
+            "emergency": "Quick relief during unseasonal heavy rains or drought",
+            "broad": "Covers minor crops and local specific varieties"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All farmers in affected regions"
+            ]
+        },
+        "requirements": [
+            "Region Verification",
+            "Farmer ID"
+        ],
+        "link": "https://pib.gov.in/",
+        "keywords": "weather, relief, compensation, damage, disaster",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "sugarcane-ins",
+        "name": "Sugarcane Crop Insurance",
+        "description": "Specialized coverage for sugarcane crops against weather perils and specific pests, ensuring financial stability for annual commercial growers.",
+        "authority": "Ministry of Agriculture / State Agri Dept",
+        "category": "Insurance",
+        "benefits": {
+            "yield_protection": "Compensation for yield loss compared to historical average",
+            "peril_coverage": "Covers fire, drought, and specific sugarcane pests"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Sugarcane Growers"
+            ]
+        },
+        "requirements": [
+            "Land Records",
+            "Sugarcane Sowing Proof",
+            "Aadhaar"
+        ],
+        "link": "https://pmfby.gov.in/",
+        "keywords": "sugarcane, sugar, crop, insurance, commercial, bima",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "yield-loss-ins",
+        "name": "Village Level Yield Insurance",
+        "description": "Aggregated insurance where claims are determined by the average yield of the village compared to historical data.",
+        "authority": "Insurance Companies (Empanelled)",
+        "category": "Insurance",
+        "benefits": {
+            "community": "Entire village receives claims if yield drops",
+            "stability": "Ensures collective resilience against local failures"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Community Farmers"
+            ]
+        },
+        "requirements": [
+            "Village Records",
+            "Sowing Proof"
+        ],
+        "link": "https://pmfby.gov.in/",
+        "keywords": "yield, village, community, insurance, bima",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "stry-train",
+        "name": "Rural Youth Skill Training (STRY)",
+        "description": "Focuses on providing vocational skills to rural youth in agricultural and allied fields to improve employability.",
+        "authority": "MANAGE",
+        "category": "Training",
+        "benefits": {
+            "skill": "Certificate in organic farming, nursery, or pest control",
+            "stipend": "Assistance provided during the training period"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Rural Youth (18-35 years)"
+            ]
+        },
+        "requirements": [
+            "Aadhaar",
+            "Education Proof"
+        ],
+        "link": "https://www.manage.gov.in/",
+        "keywords": "training, education, youth, skill, job",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "kvk-train",
+        "name": "KVK Farm Science Training",
+        "description": "Direct training at Krishi Vigyan Kendras on latest technologies, crop varieties, and best practices in farming.",
+        "authority": "ICAR - KVK",
+        "category": "Training",
+        "benefits": {
+            "hands_on": "Practical field demonstrations and local guidance",
+            "expert_access": "Direct interaction with agricultural scientists"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All farmers"
+            ]
+        },
+        "requirements": [
+            "Local Resident Proof",
+            "Farmer ID"
+        ],
+        "link": "https://kvk.icar.gov.in/",
+        "keywords": "training, kvk, science, farm, practice",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "ffs-train",
+        "name": "Farmer Field School (FFS)",
+        "description": "A field-based learning process where farmers experiment and learn 'what works' in their own environment.",
+        "authority": "Department of Agriculture",
+        "category": "Training",
+        "benefits": {
+            "peer_learning": "Group learning from fellow active farmers",
+            "solution": "Focuses on resolving local field problems on-site"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Active Cultivators"
+            ]
+        },
+        "requirements": [
+            "Farm visit availability",
+            "Group participation"
+        ],
+        "link": "https://agricoop.nic.in/",
+        "keywords": "school, field, learning, group, experiment",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "digital-agri-train",
+        "name": "Digital Agriculture & App Training",
+        "description": "Training farmers to use digital tools, e-NAM portal, and mobile apps for weather and market intelligence.",
+        "authority": "CSC & Digital India",
+        "category": "Training",
+        "benefits": {
+            "hi_tech": "Learn to use apps for soil health and market prices",
+            "transparency": "Eliminate middlemen via direct digital trading skills"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Tech-interested Farmers"
+            ]
+        },
+        "requirements": [
+            "Smartphone ownership Access",
+            "Aadhaar"
+        ],
+        "link": "https://www.digitalindia.gov.in/",
+        "keywords": "digital, app, mobile, internet, training",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "acabc-train",
+        "name": "ACABC Entrepreneurship Training",
+        "description": "45-day residential training for agri-graduates on starting and managing private extension services.",
+        "authority": "MANAGE",
+        "category": "Training",
+        "benefits": {
+            "business": "Full orientation on agri-business management",
+            "certification": "Eligible for capital subsidy loans after completion"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Agri Grad/Diploma Holders"
+            ]
+        },
+        "requirements": [
+            "Educational Cert",
+            "Interview selection"
+        ],
+        "link": "https://www.acabc.gov.in/",
+        "keywords": "startup, entrepreneur, business, training, college",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "organic-train",
+        "name": "Organic Certification Training",
+        "description": "Specialized training on organic input production, certification processes (PGS-India), and soil rejuvenation.",
+        "authority": "NCOF - PKVY",
+        "category": "Training",
+        "benefits": {
+            "organic": "Master the art of bio-fertilizer and bio-pesticide making",
+            "premium": "Learn to get certification for high-value export crops"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Future Organic Farmers"
+            ]
+        },
+        "requirements": [
+            "Organic Pledge",
+            "Cluster Membership"
+        ],
+        "link": "https://pgsindia-ncof.gov.in/",
+        "keywords": "organic, bio, natural, certification, training",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "asci-train",
+        "name": "ASCI Agriculture Skill Training",
+        "description": "Short-term courses for specialized jobs like polyhouse technician, tractor driver, or quality checker.",
+        "authority": "Skill Council of India (ASCI)",
+        "category": "Training",
+        "benefits": {
+            "certified": "NSDC certificate valid across India for employment",
+            "specific": "Practical training on industry-standard machinery"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Rural Youth and Workers"
+            ]
+        },
+        "requirements": [
+            "School Certificate",
+            "Aadhaar"
+        ],
+        "link": "https://asci-india.com/",
+        "keywords": "skill, course, job, technical, training",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "fpo-mgmt-train",
+        "name": "FPO CEO & Management Training",
+        "description": "Training for leaders of Farmer Producer Organizations on governance, inventory, and collective marketing.",
+        "authority": "SFAC & NABARD",
+        "category": "Training",
+        "benefits": {
+            "leadership": "Learn how to manage large groups and finances",
+            "networking": "Connectivity with major retailers and exporters"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "FPO Members/Office Bearers"
+            ]
+        },
+        "requirements": [
+            "FPO registration proof",
+            "Nomination"
+        ],
+        "link": "https://sfacindia.com/",
+        "keywords": "fpo, management, leadership, group, training",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "women-agri-train",
+        "name": "Training for Women Farmers (Mahila Kisan)",
+        "description": "Targeted programs for women on nutrition gardens, value addition, and drudgery reduction tools.",
+        "authority": "MKSP - DAY-NRLM",
+        "category": "Training",
+        "benefits": {
+            "empower": "Focus on income-generating activities for women",
+            "support": "Free tools and seeds for nutrition garden setup"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Women Farmers / SHG Members"
+            ]
+        },
+        "requirements": [
+            "SHG Membership",
+            "Aadhaar"
+        ],
+        "link": "https://aajeevika.gov.in/",
+        "keywords": "women, garden, nutrition, empowerment, training",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "expert-farmer-train",
+        "name": "Master Farmer Training Program",
+        "description": "Advanced training for successful farmers to become 'Krishi Doot' or extension agents to teach others.",
+        "authority": "State Outreach Programs",
+        "category": "Training",
+        "benefits": {
+            "status": "Recognition as a Progressive Farmer in the district",
+            "income": "Eligible for honorary grants for conducting local sessions"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Progressive Farmers"
+            ]
+        },
+        "requirements": [
+            "Success story proof",
+            "Recommendation"
+        ],
+        "link": "https://pib.gov.in/",
+        "keywords": "expert, master, teacher, progress, training",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "smam-equip",
+        "name": "Sub-Mission on Agri Mechanization (SMAM)",
+        "description": "The primary mission providing 40% to 50% subsidy for any farm machinery including plows and sowers.",
+        "authority": "Minister of Agriculture",
+        "category": "Equipment",
+        "benefits": {
+            "huge_saving": "Get expensive tools at nearly half the market price",
+            "broad_range": "Valid for almost all manual and power-driven implements"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All registered farmers"
+            ]
+        },
+        "requirements": [
+            "Land Records",
+            "Tractor RC (if applicable)",
+            "Aadhaar"
+        ],
+        "link": "https://agrimachinery.nic.in/",
+        "keywords": "equipment, machinery, tools, subsidy, smam",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "tractor-yojana",
+        "name": "PM Kisan Tractor Subsidy",
+        "description": "Specific subsidy for small farmers to own their first tractor to improve farm throughput.",
+        "authority": "Department of Agriculture",
+        "category": "Equipment",
+        "benefits": {
+            "max_subsidy": "Up to Rs. 1 Lakh to Rs. 3 Lakh based on HP",
+            "ownership": "Enables small farmers to stop renting tractors"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Small/Marginal Farmers"
+            ]
+        },
+        "requirements": [
+            "First-time owner proof",
+            "Land detail"
+        ],
+        "link": "https://www.myscheme.gov.in/",
+        "keywords": "tractor, vehicle, wheel, power, equipment",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "chc-equip",
+        "name": "Custom Hiring Centre (CHC) Grant",
+        "description": "Provides 40% grant to individuals or 80% to groups for setting up machines for rent to neighbors.",
+        "authority": "Rural Development",
+        "category": "Equipment",
+        "benefits": {
+            "rental_income": "Earn by renting your machines to others",
+            "communal": "Groups get massive funding to buy combined harvesters"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Individual / FPO / SHG"
+            ]
+        },
+        "requirements": [
+            "Enterprise registration",
+            "Infrastructure site"
+        ],
+        "link": "https://agrimachinery.nic.in/",
+        "keywords": "rent, hire, center, machine, equipment, chc",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "drone-subsidy",
+        "name": "Kisan Drone Subsidy",
+        "description": "Up to 100% grant for research institutes and 40-50% for farmers to use drones for spraying and mapping.",
+        "authority": "SMAM - Drone Initiative",
+        "category": "Equipment",
+        "benefits": {
+            "efficient": "Spray fertilizer/pesticides in 15 mins per acre",
+            "safe": "Avoids human contact with harmful chemicals"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Agri-Entrepreneurs / FPOs"
+            ]
+        },
+        "requirements": [
+            "Drone Pilot Training",
+            "Permit"
+        ],
+        "link": "https://agrimachinery.nic.in/",
+        "keywords": "drone, fly, spray, tech, equipment, air",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "power-tiller-equip",
+        "name": "Power Tiller & Weeder Subsidy",
+        "description": "Financial aid specifically for small-scale mechanical tillers suitable for narrow hills and small plots.",
+        "authority": "State Agri Dept",
+        "category": "Equipment",
+        "benefits": {
+            "affordable": "Low-cost alternative to tractors for small farmers",
+            "multiple": "Attachment options for weeding, pumping, and transport"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All smallholders"
+            ]
+        },
+        "requirements": [
+            "Land holding certificate",
+            "Quotations"
+        ],
+        "link": "https://agrimachinery.nic.in/",
+        "keywords": "tiller, weeder, motor, small, equipment",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "solar-equip-sub",
+        "name": "Solar Equipment & Light Trap Subsidy",
+        "description": "Subsidizes solar-powered insect light traps, solar dryers, and solar fence units to protect crops.",
+        "authority": "Renewable Energy Dept",
+        "category": "Equipment",
+        "benefits": {
+            "zero_cost": "No recurring electricity bills for farm protection",
+            "eco_friendly": "Chemical-free pest management using light traps"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All farmers"
+            ]
+        },
+        "requirements": [
+            "Aadhaar",
+            "Electricity Bill (optional)"
+        ],
+        "link": "https://pmkusum.mnre.gov.in/",
+        "keywords": "solar, light, trap, fence, dryer, equipment",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "phtm-equip",
+        "name": "Post Harvest Tool Kit (PHTM)",
+        "description": "Subsidies for small cleaning, grading, and sorting machines to increase crop market value at the farm gate.",
+        "authority": "NHB & MIDH",
+        "category": "Equipment",
+        "benefits": {
+            "value_add": "Sell graded crops at 20% higher price",
+            "quality": "Reduces moisture and dirt before reaching the mandi"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All farmers"
+            ]
+        },
+        "requirements": [
+            "Land records",
+            "Proforma Invoice"
+        ],
+        "link": "https://agriinfra.dac.gov.in/",
+        "keywords": "clean, grade, sort, pack, equipment, post-harvest",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "harvester-equip",
+        "name": "Combined Harvester Subsidy",
+        "description": "Financial assistance for high-capacity harvesting machines to reduce manual labor during peak season.",
+        "authority": "State Mechanization Missions",
+        "category": "Equipment",
+        "benefits": {
+            "time_saver": "Complete harvest of 1 acre in 1 hour",
+            "saving": "Reduces dependency on scarce agricultural labor"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Large farmers or Co-operatives"
+            ]
+        },
+        "requirements": [
+            "Land holding / Group docs",
+            "RC details"
+        ],
+        "link": "https://agrimachinery.nic.in/",
+        "keywords": "harvest, grain, rice, wheat, equipment, machine",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "irrigation-equip",
+        "name": "Modern Irrigation Tool Subsidy",
+        "description": "Covers motors, pipes, and tanks specifically for rainwater harvesting and distribution systems.",
+        "authority": "PMKSY - Watershed",
+        "category": "Equipment",
+        "benefits": {
+            "storage": "Funds for building farm ponds and community tanks",
+            "distribution": "Subsidized PVC pipes and high-efficiency pumps"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All farmers"
+            ]
+        },
+        "requirements": [
+            "Layout plan",
+            "Estimate"
+        ],
+        "link": "https://pmksy.gov.in/",
+        "keywords": "pump, pipe, tank, water, equipment, distribution",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "small-tools-kit",
+        "name": "Improved Manual Tools Kit",
+        "description": "Distributes high-quality ergonomic manual tools at 90% subsidy for women and tribal farmers.",
+        "authority": "Tribal Affairs / Outreach",
+        "category": "Equipment",
+        "benefits": {
+            "relief": "Reduces physical strain using modern ergonomic designs",
+            "effective": "Better weeding and sowing than traditional old tools"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Small/Tribal/Women Farmers"
+            ]
+        },
+        "requirements": [
+            "Caste / Gender certificate",
+            "Aadhaar"
+        ],
+        "link": "https://pib.gov.in/",
+        "keywords": "manual, tools, small, hand, equipment, kit",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "enam-market",
+        "name": "National Agriculture Market (e-NAM)",
+        "description": "An online trading platform that connects your local mandi to buyers across India for better prices.",
+        "authority": "SFAC",
+        "category": "Marketing",
+        "benefits": {
+            "price": "Real-time pricing data and multiple bidders for your crop",
+            "direct": "Get payments directly into your bank after online trade"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "All farmers"
+            ]
+        },
+        "requirements": [
+            "Aadhaar",
+            "Bank Account",
+            "Mobile"
+        ],
+        "link": "https://enam.gov.in/web/",
+        "keywords": "market, online, trade, price, enam, sell",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "aif-market",
+        "name": "AIF Storage Infrastructure",
+        "description": "Funding to build your own cold storage or warehouse to avoid selling when prices are low.",
+        "authority": "Ministry of Agriculture",
+        "category": "Marketing",
+        "benefits": {
+            "infra": "Own your storage space with government funding assistance",
+            "marketing": "Hold produce until market peaks for maximum profit"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Agri-graduates, FPOs, Individual Farmers"
+            ]
+        },
+        "requirements": [
+            "Project Report",
+            "Land Title"
+        ],
+        "link": "https://agriinfra.dac.gov.in/",
+        "keywords": "storage, marketing, warehouse, aif, infrastructure",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "operation-greens",
+        "name": "Operation Greens (TOP-II)",
+        "description": "Support for price stabilization and integrated value chain for Tomatos, Onions, Potatoes, and 22 other crops.",
+        "authority": "Ministry of Food Processing",
+        "category": "Marketing",
+        "benefits": {
+            "logistics": "50% subsidy on transportation from farm to market",
+            "storage": "50% subsidy on hiring storage space in peak months"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Active producers of listed crops"
+            ]
+        },
+        "requirements": [
+            "Crop verification",
+            "Bill of transit"
+        ],
+        "link": "https://mofpi.gov.in/",
+        "keywords": "marketing, transportation, storage, potato, onion, tomato",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "agmarknet",
+        "name": "Agmarknet Price Information",
+        "description": "A transparent portal providing daily market arrivals and price trends from 3000+ nodes nationwide.",
+        "authority": "DMI",
+        "category": "Marketing",
+        "benefits": {
+            "knowledge": "Know today's price in nearby cities before leaving home",
+            "trending": "Analyze seasonal trends to decide next crop planting"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Open for All"
+            ]
+        },
+        "requirements": [
+            "Internet Access"
+        ],
+        "link": "https://agmarknet.gov.in/",
+        "keywords": "marketing, price, info, news, agmarknet, trend",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "kisan-rail-market",
+        "name": "Kisan Rail Transport",
+        "description": "Special train service for perishable goods (fruits, veg) with 50% subsidy on freight charges.",
+        "authority": "Indian Railways",
+        "category": "Marketing",
+        "benefits": {
+            "fast": "Reaches distant markets (e.g., Delhi) in 48 hours with fresh crops",
+            "cheap": "Huge saving on long-distance trucking costs"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Horticulture / Veg Producers"
+            ]
+        },
+        "requirements": [
+            "Transit Booking",
+            "Farmer ID"
+        ],
+        "link": "https://indianrailways.gov.in/",
+        "keywords": "train, rail, marketing, transportation, fresh, distance",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "ami-market",
+        "name": "Agri Marketing Infrastructure (AMI)",
+        "description": "A sub-scheme of ISAM focused on strengthening rural mandis and primary processing clusters.",
+        "authority": "Directorate of Marketing",
+        "category": "Marketing",
+        "benefits": {
+            "local": "Better facilities (grading, weighing) in your own village mandi",
+            "scientific": "Reduction in physical handling damage during sale"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Panchayats / FPOs / Farmers"
+            ]
+        },
+        "requirements": [
+            "Local Node Proposal",
+            "Land"
+        ],
+        "link": "https://agricoop.nic.in/",
+        "keywords": "marketing, infra, mandi, rural, village, facility",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "ps-scheme",
+        "name": "Price Support Scheme (PSS)",
+        "description": "Direct procurement by NAFED/FCI when market price falls below Minimum Support Price (MSP) for pulses and oilseeds.",
+        "authority": "NAFED",
+        "category": "Marketing",
+        "benefits": {
+            "guarantee": "Govt buys your crop at MSP if open market fails",
+            "security": "Ensures you never sell at a loss regardless of market surplus"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Pulse and Oilseed Farmers"
+            ]
+        },
+        "requirements": [
+            "Land records",
+            "Market Committee Slip"
+        ],
+        "link": "https://www.nafed-india.com/",
+        "keywords": "marketing, msp, pss, nafed, procurement, buy",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "mis-market",
+        "name": "Market Intervention Scheme (MIS)",
+        "description": "Compensation for horticulture crops during years of over-production when prices crash significantly.",
+        "authority": "Department of Agriculture",
+        "category": "Marketing",
+        "benefits": {
+            "relief": "Covers losses for crops not covered under regular MSP",
+            "bailout": "Activated during sudden market collapses for potato or ginger"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Horticulture Farmers"
+            ]
+        },
+        "requirements": [
+            "State activation notice",
+            "Aadhaar"
+        ],
+        "link": "https://agricoop.nic.in/",
+        "keywords": "marketing, crash, intervention, relief, compensation",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "export-market",
+        "name": "Agri Export Zone (AEZ) Benefit",
+        "description": "Support for farmers to export high-quality products to international markets via APEDA clusters.",
+        "authority": "APEDA",
+        "category": "Marketing",
+        "benefits": {
+            "global": "Direct access to buyers in Dubai, Europe, and USA",
+            "premium": "Earn 5x higher prices for export-quality organic produce"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Farmers in AEZ clusters"
+            ]
+        },
+        "requirements": [
+            "Quality Cert",
+            "Export Registration"
+        ],
+        "link": "https://apeda.gov.in/",
+        "keywords": "marketing, export, international, global, high-value",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    },
+    {
+        "id": "gramin-bhandaran",
+        "name": "Gramin Bhandaran Yojana",
+        "description": "Grants for building scientific storage for farm produce in rural areas to improve shelf life.",
+        "authority": "NABARD",
+        "category": "Marketing",
+        "benefits": {
+            "shelf_life": "Scientific design protects against moisture and rats",
+            "access": "No need to travel to city cold storage units"
+        },
+        "eligibility": {
+            "farmer_type": [
+                "Rural Individual Farmers"
+            ]
+        },
+        "requirements": [
+            "Rural Land Title",
+            "Standard Design Plot"
+        ],
+        "link": "https://www.nabard.org/",
+        "keywords": "marketing, storage, rural, gramin, warehouse, bhandaran",
+        "compatibility_weights": {
+            "category_match": 1.0
+        }
+    }
+]

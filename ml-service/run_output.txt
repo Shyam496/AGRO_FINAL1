@@ -1,0 +1,34 @@
+2026-03-30 19:39:28.803957: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-30 19:39:30.335716: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-30 19:39:35.278837: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\Jayakumar\AppData\Roaming\Python\Python311\site-packages\keras\src\backend\tensorflow\core.py:184: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+✅ NASA LSTM model loaded successfully
+✅ XGBoost error correctors loaded
+Traceback (most recent call last):
+  File "C:\Users\Jayakumar\Downloads\Final yr project\agromind\ml-service\verify_multi_turn.py", line 4, in <module>
+    from chat_engine import expert
+  File "C:\Users\Jayakumar\Downloads\Final yr project\agromind\ml-service\chat_engine.py", line 10, in <module>
+    from chat.rag_engine import rag_engine
+  File "C:\Users\Jayakumar\Downloads\Final yr project\agromind\ml-service\chat\rag_engine.py", line 5, in <module>
+    from langchain_text_splitters import CharacterTextSplitter
+  File "C:\Users\Jayakumar\AppData\Roaming\Python\Python311\site-packages\langchain_text_splitters\__init__.py", line 8, in <module>
+    from langchain_text_splitters.base import (
+  File "C:\Users\Jayakumar\AppData\Roaming\Python\Python311\site-packages\langchain_text_splitters\base.py", line 33, in <module>
+    from transformers.tokenization_utils_base import PreTrainedTokenizerBase
+  File "C:\Users\Jayakumar\AppData\Roaming\Python\Python311\site-packages\transformers\__init__.py", line 30, in <module>
+    from . import dependency_versions_check
+  File "C:\Users\Jayakumar\AppData\Roaming\Python\Python311\site-packages\transformers\dependency_versions_check.py", line 16, in <module>
+    from .utils.versions import require_version, require_version_core
+  File "C:\Users\Jayakumar\AppData\Roaming\Python\Python311\site-packages\transformers\utils\__init__.py", line 22, in <module>
+    from .auto_docstring import (
+  File "C:\Users\Jayakumar\AppData\Roaming\Python\Python311\site-packages\transformers\utils\auto_docstring.py", line 30, in <module>
+    from .generic import ModelOutput
+  File "C:\Users\Jayakumar\AppData\Roaming\Python\Python311\site-packages\transformers\utils\generic.py", line 44, in <module>
+    import torch
+  File "C:\Users\Jayakumar\AppData\Roaming\Python\Python311\site-packages\torch\__init__.py", line 280, in <module>
+    _load_dll_libraries()
+  File "C:\Users\Jayakumar\AppData\Roaming\Python\Python311\site-packages\torch\__init__.py", line 263, in _load_dll_libraries
+    raise err
+OSError: [WinError 1114] A dynamic link library (DLL) initialization routine failed. Error loading "C:\Users\Jayakumar\AppData\Roaming\Python\Python311\site-packages\torch\lib\c10.dll" or one of its dependencies.

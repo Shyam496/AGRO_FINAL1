@@ -1,0 +1,151 @@
+{
+    "intents": [
+        {
+            "tag": "soil_health",
+            "patterns": [
+                "how to improve soil health",
+                "what is the best soil for farming",
+                "soil test importance",
+                "check soil quality",
+                "soil pH level importance",
+                "salty soil correction",
+                "improve fertility of land",
+                "increase soil nitrogen",
+                "soil nutrients",
+                "prepare land for planting",
+                "low soil fertility fix",
+                "clay soil vs sandy soil",
+                "how to test soil at home"
+            ],
+            "responses": [
+                "Soil health is fundamental! To improve it: 1. **Organic Matter**: Add compost or green manure. 2. **Crop Rotation**: Don't plant the same crop twice in a row. 3. **Minimal Tillage**: Avoid over-ploughing to maintain soil structure. 4. **Cover Crops**: Plant legumes to fix nitrogen naturally.",
+                "The ideal soil for most crops is **Loam** (a balance of sand, silt, and clay). Maintaining a pH between **6.0 and 7.5** is critical for nutrient availability. Have you done a soil test recently?"
+            ]
+        },
+        {
+            "tag": "organic_farming",
+            "patterns": [
+                "tell me about organic farming",
+                "how to start organic farming",
+                "natural fertilizers",
+                "bio-pesticides",
+                "organic pest control",
+                "vermicompost benefits",
+                "grow crops naturally",
+                "no chemical farming",
+                "organic method",
+                "avoid pesticides naturally",
+                "benefits of organic food",
+                "natural way to grow tomato",
+                "homemade pesticides"
+            ],
+            "responses": [
+                "Organic farming relies on ecological processes rather than chemicals. Key practices include: 1. **Vermicompost**: Using earthworms to turn waste into 'black gold'. 2. **Neem Oil**: A powerful natural pesticide. 3. **Panchagavya**: A traditional organic growth promoter. Would you like a step-by-step guide on making any of these?",
+                "Transitioning to organic takes 3 years to certify! Start by replacing urea with **biomass** and using **crop rotation** to manage pests naturally. It focuses on biodiversity and soil health above all else."
+            ]
+        },
+        {
+            "tag": "pest_management",
+            "patterns": [
+                "common pests in tomato",
+                "how to control insect attack",
+                "worm infestation in crops",
+                "aphid control",
+                "natural pesticide for rice",
+                "prevent pest attacks",
+                "bugs on my plant",
+                "leaf eating insects",
+                "protect crops from pests",
+                "whitefly control",
+                "how to kill caterpillars",
+                "yellow leaves pest"
+            ],
+            "responses": [
+                "Pest management should be **Integrated (IPM)**: 1. **Monitor**: Check under leaves daily. 2. **Biological**: Use ladybugs to eat aphids. 3. **Physical**: Use yellow sticky traps. 4. **Botanical**: Neem oil or Garlic-Chilli spray is highly effective.",
+                "Identification is key! If you see holes or yellowing, it could be **Blight** or **Aphids**. Use our **Disease Detection** tool to upload a photo for a scientific diagnosis."
+            ]
+        },
+        {
+            "tag": "irrigation_techniques",
+            "patterns": [
+                "what is irrigation",
+                "best irrigation method",
+                "what is drip irrigation",
+                "save water in farming",
+                "how often should I water crops",
+                "sprinkler vs drip",
+                "smart irrigation",
+                "watering plants in summer",
+                "efficient water management",
+                "borewell water quality",
+                "irrigation for dry land"
+            ],
+            "responses": [
+                "Efficient water usage is vital. 1. **Drip Irrigation**: Delivers water directly to roots (90% efficient). 2. **Sprinklers**: Good for cereals but loses water to evaporation. 3. **Mulching**: Covering soil with straw reduces water loss by 50%.",
+                "I recommend **Drip Irrigation** for modern farming. It reduces weed growth and saves up to 70% more water than traditional flood irrigation. Always check my **Irrigation Advisory** module for daily schedules!"
+            ]
+        },
+        {
+            "tag": "seed_selection",
+            "patterns": [
+                "how to choose good seeds",
+                "hybride vs desi seeds",
+                "seed treatment process",
+                "certified seeds importance",
+                "germination test",
+                "buying quality seeds",
+                "store seeds for next year",
+                "treated seeds safety"
+            ],
+            "responses": [
+                "Always select **Certified Seeds** from reliable sources. 1. **Germination Test**: Soak 10 seeds; if 8 sprout, they are high quality. 2. **Seed Treatment**: Treat with Trichoderma to prevent soil-borne diseases. 3. **Hybrid seeds** offer high yield but require more water and care.",
+                "Seed quality determines 50% of your yield. Look for high **Purity Percentage** and **Physical Vigor**. For local conditions, traditional (Desi) varieties often show better resistance than sensitive hybrids."
+            ]
+        },
+        {
+            "tag": "crop_rotation",
+            "patterns": [
+                "what is crop rotation",
+                "benefits of rotation",
+                "why change crops every year",
+                "legume rotation importance",
+                "smart planting sequence"
+            ],
+            "responses": [
+                "Crop rotation is the practice of planting different types of crops in the same area in sequenced seasons. **Benefits**: 1. Breaks pest/disease cycles. 2. Improves soil nitrogen (using legumes). 3. Prevents soil erosion. 4. Increases overall yield by up to 15%.",
+                "A classic rotation is: **Grain** -> **Legume** -> **Root Crop**. This ensures your soil doesn't get depleted of specific nutrients. For example, plant Beans after Corn to restore Nitrogen levels."
+            ]
+        },
+        {
+            "tag": "general_greetings",
+            "patterns": [
+                "hi",
+                "hello",
+                "hey",
+                "good morning",
+                "good afternoon",
+                "greetings expert",
+                "how are you"
+            ],
+            "responses": [
+                "Greetings! I am **AgroMind Expert**, your trained AI agricultural specialist. How can I assist your farm today?",
+                "Hello! I'm here to help with scientific farming advice. Are we discussing soil, pests, or fertilizers today?"
+            ]
+        },
+        {
+            "tag": "identity",
+            "patterns": [
+                "who are you",
+                "what is your name",
+                "what do you do",
+                "who created you",
+                "what can you help with",
+                "tell me about yourself"
+            ],
+            "responses": [
+                "I am **AgroMind Expert**, a specialized AI developed for the AgroMind project. I combine real-time weather data with machine learning to provide technical farming advice.",
+                "You can call me **AgroMind Agent**. I'm trained to help with disease identification, fertilizer optimization, and general agricultural science."
+            ]
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+  "best_model": "Random Forest",
+  "test_accuracy": 0.9236,
+  "models": {
+    "random_forest": 0.9236,
+    "neural_network": 0.9013333320617676
+  },
+  "num_classes": 10,
+  "fertilizers": [
+    "10-26-26",
+    "14-35-14",
+    "17-17-17",
+    "20-20",
+    "28-28",
+    "Ammonium Sulphate",
+    "DAP",
+    "MOP",
+    "SSP",
+    "Urea"
+  ],
+  "features": [
+    "Temperature",
+    "Humidity",
+    "Moisture",
+    "Soil Type",
+    "Crop Type",
+    "Nitrogen",
+    "Phosphorous",
+    "Potassium",
+    "N_P_ratio",
+    "N_K_ratio",
+    "P_K_ratio",
+    "NPK_sum",
+    "Temp_Humidity",
+    "Moisture_Humidity"
+  ],
+  "num_features": 14,
+  "feature_engineering": true,
+  "hyperparameter_tuning": false,
+  "soil_types": [
+    "Black",
+    "Clayey",
+    "Loamy",
+    "Red",
+    "Sandy"
+  ],
+  "crop_types": [
+    "Apple",
+    "Banana",
+    "Brinjal",
+    "Cabbage",
+    "Cauliflower",
+    "Chilli",
+    "Cotton",
+    "Cucumber",
+    "Grapes",
+    "Groundnut",
+    "Maize",
+    "Mango",
+    "Muskmelon",
+    "Okra",
+    "Onion",
+    "Orange",
+    "Pomegranate",
+    "Potato",
+    "Rice",
+    "Soybean",
+    "Sugarcane",
+    "Tomato",
+    "Watermelon",
+    "Wheat"
+  ]
+}

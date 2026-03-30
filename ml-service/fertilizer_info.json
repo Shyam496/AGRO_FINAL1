@@ -1,0 +1,442 @@
+{
+  "Urea": {
+    "code": "46-0-0",
+    "full_name": "Urea (46%)",
+    "composition": {
+      "N": 46,
+      "P": 0,
+      "K": 0
+    },
+    "application_rate_per_acre": 50,
+    "cost_per_kg": 6,
+    "description": "High nitrogen source for rapid vegetative growth and leaf development.",
+    "application_method": [
+      "Top dressing / Broadcasting",
+      "Side dressing along crop rows",
+      "Foliar spray (low concentration)",
+      "Band placement in soil"
+    ],
+    "application_timing": [
+      "Applied in split doses; 50% at sowing",
+      "During early vegetative growth stage",
+      "2-3 weeks after transplanting",
+      "Peak growth periods before flowering"
+    ],
+    "secondary_nutrients": [
+      "None",
+      "Requires supplemental Sulphur",
+      "Enriched with trace Zinc",
+      "Add Magnesium if leaves yellow"
+    ],
+    "precautions": [
+      "Critically avoid any direct contact between the fertilizer granules and the seeds during sowing to prevent severe salt injury and chemical desiccation of the delicate germinating tissues.",
+      "Always prioritize application when the soil profile contains sufficient residual moisture; applying to bone-dry soil can lead to rapid volatilization losses and poor nutrient assimilation by the roots.",
+      "Ensure that all opened bags are sealed hermetically immediately after use as Urea is highly hygroscopic and will rapidly absorb atmospheric moisture, leading to significant caking and reduced effectiveness of the granules.",
+      "Strictly avoid application during periods of heavy forecasted rainfall as the high solubility of Urea makes it extremely prone to leaching deep into the soil profile away from the active root zone.",
+      "Maintain a consistent safety distance of at least 5 to 10 centimeters from the primary plant stem to minimize the risk of localized ammonium toxicity and potential stem-burn symptoms."
+    ],
+    "expected_benefit": [
+      "Expected to drive a rapid and significant increase in primary leaf surface area and overall plant biomass, which is essential for maximizing the photosynthetic capacity of the entire crop canopy.",
+      "Provides a high-concentration nitrogen surge that results in a deep, lush green foliage color by significantly enhancing the internal production of chlorophyll and enzymatic proteins within the plant cells.",
+      "Proven to markedly improve the final protein concentration and amino acid profile in cereal grains, thereby enhancing both the nutritional value and the market grade of the harvested crop.",
+      "Accelerates the transition through early vegetative development stages, ensuring the plant reaches its full structural potential before moving into the critical reproductive and flowering phases.",
+      "Functions as an immediate corrective measure for acute nitrogen deficiency symptoms like chlorosis, restoring healthy growth patterns and physiological vigor within a very short timeframe after application."
+    ]
+  },
+  "DAP": {
+    "code": "18-46-0",
+    "full_name": "Diammonium Phosphate (DAP)",
+    "composition": {
+      "N": 18,
+      "P": 46,
+      "K": 0
+    },
+    "application_rate_per_acre": 50,
+    "cost_per_kg": 28,
+    "description": "Premium source of phosphorus and nitrogen for healthy root establishment.",
+    "application_method": [
+      "Basal application",
+      "Placement near seed",
+      "Drilling into the soil",
+      "Incorporation during land preparation"
+    ],
+    "application_timing": [
+      "At sowing stage",
+      "During transplanting",
+      "Initial root establishment phase",
+      "Pre-sowing basal dose"
+    ],
+    "secondary_nutrients": [
+      "Sulphur 10 kg/ha",
+      "Trace amounts of Iron",
+      "Calcium for cell wall strength",
+      "None additional required"
+    ],
+    "precautions": [
+      "Strictly minimize any direct physical contact with the seed embryo during placement as the localized high ph-level and ammonium release can lead to significant germination failure and seedling mortality.",
+      "Focus on achieving a high degree of uniformity during soil incorporation to ensure that the immobility of phosphorus does not result in uneven nutrient patches across the cultivated field area.",
+      "Strategically place the fertilizer approximately 2 to 3 inches away and slightly deeper than the seed line to allow the developing roots to intercept the nutrient band without immediate exposure to high salt concentrations.",
+      "In regions with highly acidic soil profiles, it is strongly recommended to use DAP in conjunction with lime to prevent the rapid fixation of phosphorus by aluminum and iron oxides in the soil.",
+      "Proactively wash hands and any exposed skin surfaces thoroughly with soap and clean water immediately after handling the granules to prevent potential skin irritation from industrial-grade chemical residues."
+    ],
+    "expected_benefit": [
+      "Provides the critical phosphorus foundation required for the rapid establishment of a strong, deep, and extensive primary root system that can efficiently access water and nutrients from lower soil layers.",
+      "Significantly enhances early-stage seedling establishment and vigor, providing the plant with a competitive advantage against environmental stressors and early-season weed competition in the field environment.",
+      "Demonstrates a clear ability to reduce the physiological impact of transplanting shock in vegetable and nursery crops, ensuring a much smoother and faster transition to the active growth phase.",
+      "Encourages an earlier and more uniform transition into the flowering phase by optimizing the internal energy transfer processes involving adenosine triphosphate (ATP) molecules within the plant's metabolic pathways.",
+      "Dramatically improves the plant's overall resilience to phosphorous deficiency, leading to thicker stems, more robust leaf development, and a higher potential for maximum terminal yield at harvest time."
+    ]
+  },
+  "10-26-26": {
+    "code": "10-26-26",
+    "full_name": "NPK 10:26:26 Complex",
+    "composition": {
+      "N": 10,
+      "P": 26,
+      "K": 26
+    },
+    "application_rate_per_acre": 60,
+    "cost_per_kg": 25,
+    "description": "Balanced high P-K complex for fruiting and tuber crops.",
+    "application_method": [
+      "Soil placement",
+      "Side dressing",
+      "Band application",
+      "Deep soil incorporation"
+    ],
+    "application_timing": [
+      "Basal dose at sowing",
+      "Early squaring stage",
+      "Before flowering starts",
+      "During tuber initiation"
+    ],
+    "secondary_nutrients": [
+      "Sulphur, Zinc (Trace)",
+      "Boron for fruit quality",
+      "Magnesium for healthy leaves",
+      "None"
+    ],
+    "precautions": [
+      "Achieve near-perfect uniformity during application to prevent localized imbalances between nitrogen, phosphorus, and potassium which could adversely affect long-term soil health and crop maturation consistency.",
+      "Strictly avoid any surface application on bone-dry soil beds as the high potassium and phosphorus content requires sufficient moisture for initial dissolution and movement into the active root zone of the crop.",
+      "Exercise extreme care to keep fertilizer granules away from young, tender foliage and growing points to minimize the risk of osmotic foliar burn symptoms during high-temperature daytime periods.",
+      "For maximum efficiency, always incorporate the fertilizer at least 10-15 centimeters into the root zone to prevent nutrient runoff and ensure availability during the critical reproductive stages of the plant life cycle.",
+      "Regularly monitor soil moisture levels before and after application to ensure that the fertilizer is properly solubilized and that the plant's vascular system is sufficiently hydrated to process the nutrient load."
+    ],
+    "expected_benefit": [
+      "Specifically formulated to drive a significant improvement in final fruit size, weight, and volume, leading to higher market grade certifications and improved overall farm-gate profitability for the grower.",
+      "Aims to markedly increase the internal sugar concentration and starch accumulation within the produce, resulting in a much more desirable taste profile and improved nutritional quality for the end consumer.",
+      "Significantly enhances the overall crop quality and post-harvest shelf-life, which is a critical factor for long-distance transportation and storage efficiency in the modern agricultural supply chain.",
+      "Strongly encourages the development of thicker stalks and improved lodging resistance, ensuring the crop remains upright even during periods of heavy wind or unexpected environmental challenges in the field.",
+      "Optimizes starch accumulation and dry matter production in tuber crops like potatoes and sweet potatoes, leading to larger, more uniform harvests with better processing characteristics and culinary quality."
+    ]
+  },
+  "14-35-14": {
+    "code": "14-35-14",
+    "full_name": "NPK 14:35:14 (Gromor Complex)",
+    "composition": {
+      "N": 14,
+      "P": 35,
+      "K": 14
+    },
+    "application_rate_per_acre": 55,
+    "cost_per_kg": 30,
+    "description": "High phosphorus complex with nitrate nitrogen for quick absorption.",
+    "application_method": [
+      "Basal application",
+      "Seedbed enrichment",
+      "Sub-surface placement",
+      "Spot application near roots"
+    ],
+    "application_timing": [
+      "Initial growth stages",
+      "At time of sowing",
+      "Seedling transplanting",
+      "Early rapid growth phase"
+    ],
+    "secondary_nutrients": [
+      "Sulphur 10 kg/ha",
+      "Magnesium trace",
+      "Zinc for enzyme activation",
+      "None"
+    ],
+    "precautions": [
+      "Explicitly avoid mixing this complex with high-calcium fertilizers as the chemical reaction can lead to the formation of insoluble compounds that significantly reduce nutrient availability in the soil.",
+      "Always ensure that the granules are kept well away from the foliage of young plants, especially during the early morning hours when dew is present, to prevent localized leaf tissue burns.",
+      "Optimize water management and maintain consistent irrigation schedules immediately after soil application to facilitate the rapid dissolution and downward movement of the nitrate-nitrogen component.",
+      "Ensure the fertilizer is stored in high-quality, multi-layered moisture-proof bags and kept in a cool, ventilated warehouse to prevent chemical degradation and ensure long-term stability of the nutrient profile.",
+      "Utilize appropriate personal protective equipment, including dust masks and gloves, during the application process to prevent the direct inhalation of fine fertilizer dust and minimize skin exposure."
+    ],
+    "expected_benefit": [
+      "Triggers a vigorous and sustained growth surge immediately following the early growth stages, ensuring that the crop establishes a strong physiological foundation for the rest of the season.",
+      "Features a highly specialized nutrient delivery system that maximizes the efficiency of root uptake, ensuring that a higher percentage of applied nutrients are actually assimilated by the plant tissues.",
+      "Promotes a much healthier and more uniform flowering pattern while significantly reducing the incidence of premature flower drop, which directly correlates to a better final seed and fruit set.",
+      "Dramatically improves the plant's internal tolerance mechanisms against soil-borne pathogens and environmental stressors by fortifying the cellular walls and enhancing systemic resilience within the crop population.",
+      "Significantly minimizes the recovery time from early-season transplanting shock, allowing the young seedlings to resume active growth and nutrient assimilation almost immediately after being moved to the field."
+    ]
+  },
+  "17-17-17": {
+    "code": "17-17-17",
+    "full_name": "NPK 17:17:17 Balanced",
+    "composition": {
+      "N": 17,
+      "P": 17,
+      "K": 17
+    },
+    "application_rate_per_acre": 50,
+    "cost_per_kg": 22,
+    "description": "Perfectly balanced NPK for all-purpose agricultural use.",
+    "application_method": [
+      "Broadcasting",
+      "Placement in furrows",
+      "Mechanical application",
+      "Manual side dressing"
+    ],
+    "application_timing": [
+      "Suitable for all stages",
+      "Basal application",
+      "Maintenance dosing",
+      "Mid-season top up"
+    ],
+    "secondary_nutrients": [
+      "Sulphur (~5%)",
+      "Trace micro-nutrients",
+      "Calcium (Moderate)",
+      "None"
+    ],
+    "precautions": [
+      "Strictly refrain from applying granules into areas of standing water to prevent rapid nutrient runoff into the surrounding environment and ensure that the fertilizer stays within the target root zone.",
+      "Proactively focus on achieving an exceptionally even distribution across the entire soil surface to prevent the formation of localized high-salt zones that could potentially stress the root systems of sensitive crops.",
+      "For significantly enhanced efficiency, always attempt to pre-mix the fertilizer with organic manure or compost before soil application to improve the overall nutrient retention and slow-release characteristics.",
+      "Always schedule a thorough field irrigation shortly after the broadcasting process to help pull the granules into the soil profile and minimize any potential losses through air-borne volatilization.",
+      "Use extreme caution and strictly adhere to the scientifically recommended application rates to avoid the buildup of excessive salts which can lead to long-term soil toxicity and reduced crop yields."
+    ],
+    "expected_benefit": [
+      "Ensures a highly standardized and balanced growth pattern across all parts of the plant, preventing the over-development of foliage at the expense of root strength or final fruit and grain production.",
+      "Aims to provide exceptionally steady and reliable yields even in varying environmental conditions by maintaining a constant and balanced supply of all three primary macro-nutrients to the soil solution.",
+      "Greatly simplifies the complexities of nutrient management for growers practicing mixed cropping or multi-stage harvesting, providing a reliable baseline of soil fertility for multiple plant types.",
+      "Significantly fortifies the overall systemic health of the crop population, leading to a marked increase in the plant's natural ability to withstand common agricultural diseases and pest pressures.",
+      "Shows a remarkable track record of reliable and consistent performance across a wide spectrum of soil types, from light sandy soils to heavy clay-based agricultural lands in different climates."
+    ]
+  },
+  "20-20": {
+    "code": "20-20-0",
+    "full_name": "NPK 20:20:0 (Ammonium Phosphate)",
+    "composition": {
+      "N": 20,
+      "P": 20,
+      "K": 0
+    },
+    "application_rate_per_acre": 45,
+    "cost_per_kg": 20,
+    "description": "High N-P content ideal for cereals and vegetable crops.",
+    "application_method": [
+      "Top dressing",
+      "Basal drilling",
+      "Side band placement",
+      "Dissolved application"
+    ],
+    "application_timing": [
+      "Vegetative growth stage",
+      "Early reproductive stage",
+      "Tillering phase in cereals",
+      "Post-transplanting"
+    ],
+    "secondary_nutrients": [
+      "Sulphur (13%)",
+      "Ammonium Nitrogen surge",
+      "Calcium trace",
+      "None"
+    ],
+    "precautions": [
+      "Immediately and thoroughly wash your hands and any skin surfaces that came into contact with the fertilizer after use to prevent industrial chemical irritation and maintain safe handling protocols.",
+      "Strictly avoid any accidental contact with the eyes or open wounds during the application process to prevent severe chemical irritation and possible secondary infections in sensitive tissue areas.",
+      "Prioritize storage in an exceptionally dry and well-ventilated storage facility that is completely isolated from moisture to maintain the chemical stability and physical integrity of the individual granules.",
+      "Ensure that all fertilizer storage and handling areas are kept strictly inaccessible to children and domestic pets to prevent accidental ingestion and potential chemical poisoning incidents.",
+      "Do not store fertilizer bags in close proximity to oils, greases, or other combustible materials as the chemical nature of some compounds could potentially create hazardous and unstable warehouse conditions."
+    ],
+    "expected_benefit": [
+      "Aggressively promotes a robust and dense canopy growth that maximizes the plant's light interception capacity and leads to significantly increased leaf density during the peak vegetative phase.",
+      "Noticeably increases the structural strength of the stems and primary stalks, which is a critical factor in reducing the risk of lodging during periods of heavy wind or rapid crop development.",
+      "Significantly enhances the final seed production and grain filling stages, ensuring that fruits and grains reach their maximum genetic size and density before the final harvest period begins.",
+      "Provides for the significant and essential replenishment of soil sulphur levels, which is often a hidden limiting factor in low-sulphur soil profiles across many agricultural regions worldwide.",
+      "Exhibits a much faster physiological response time compared to traditional organic nutrient sources, allowing for rapid crop recovery and visible growth improvements within days of application."
+    ]
+  },
+  "28-28": {
+    "code": "28-28-0",
+    "full_name": "NPK 28:28:0 (High Urea Phosphate)",
+    "composition": {
+      "N": 28,
+      "P": 28,
+      "K": 0
+    },
+    "application_rate_per_acre": 40,
+    "cost_per_kg": 35,
+    "description": "Concentrated N-P fertilizer for intensive high-yield farming.",
+    "application_method": [
+      "Side dressing",
+      "Placement near root zone",
+      "Band application 5cm deep",
+      "Split application method"
+    ],
+    "application_timing": [
+      "Peak nutrient demand stage",
+      "Mid-vegetative growth",
+      "Before grain filling",
+      "At boot stage in wheat"
+    ],
+    "secondary_nutrients": [
+      "High Nitrogen concentration",
+      "Enriched Phosphorus",
+      "Trace minerals",
+      "None"
+    ],
+    "precautions": [
+      "Confirm the presence of adequate soil moisture through field checks before and immediately after application to ensure the highly concentrated nitrogen and phosphorus do not cause localized root dehydration.",
+      "Exercise extreme caution when applying this high-strength formula to sensitive young crops or early seedlings, as the risk of localized ammonium toxicity and chemical burn is much higher than with lower-grade complexes.",
+      "Strategically apply the granules in a narrow, consistent band at a distance of approximately 5 to 8 centimeters away from the seed row to prevent direct exposure while ensuring the young roots reach the nutrient zone quickly.",
+      "Proactively monitor and prevent the buildup of oversized granules or excessive piles at the ends of rows to ensure a perfectly uniform growth pattern and prevent localized 'hotspots' in the soil profile.",
+      "Utilize a professional-grade dust mask and protective goggles if the fertilizer batch appears dusty, to prevent the direct inhalation of chemical particles and avoid possible respiratory irritation during handling."
+    ],
+    "expected_benefit": [
+      "Designed specifically to maximize the total potential yield in high-density intensive planting systems by providing a massive and direct supply of primary nutrients during the peak maturation window.",
+      "Triggers a superior and sustained vegetative growth surge that is particularly beneficial for short-duration crops that need to reach maximum biomass within a very condensed seasonal timeframe.",
+      "Ensures high levels of direct nutrient availability during the most critical growth phases, effectively bypassing slow mineralization processes and providing immediate support for cellular development.",
+      "The highly concentrated nature of this formula significantly reduces the overall handling, storage, and transport costs per unit of nutrient, providing better economic efficiency for large-scale farm operations.",
+      "Aggressively promotes rapid and uniform tillering in intensive paddy and wheat cropping systems, leading to a much higher number of productive panicles per square meter of cultivated land."
+    ]
+  },
+  "MOP": {
+    "code": "0-0-60",
+    "full_name": "Muriate of Potash (MOP)",
+    "composition": {
+      "N": 0,
+      "P": 0,
+      "K": 60
+    },
+    "application_rate_per_acre": 40,
+    "cost_per_kg": 18,
+    "description": "The most common source of potassium for stalk strength and fruit quality.",
+    "application_method": [
+      "Basal dressing",
+      "Top dressing",
+      "Split dose broadcasting",
+      "Placement in lower root zone"
+    ],
+    "application_timing": [
+      "Flowering stage",
+      "Fruit filling stage",
+      "Late vegetative growth",
+      "Before harvest maturity"
+    ],
+    "secondary_nutrients": [
+      "Chlorine (Trace)",
+      "High Potassium delivery",
+      "Enzymatic co-factors",
+      "None"
+    ],
+    "precautions": [
+      "Strictly avoid any use of MOP in the cultivation of chloride-sensitive crops such as tobacco, certain berry varieties, or specific potato cultivars to prevent chlorine toxicity and reduced produce quality.",
+      "Ensure that all fertilizer stock is maintained in high-quality, airtight containers or waterproof bags to prevent the degradation of the granules and maintain the high potassium concentration over long periods.",
+      "Never mix Muriate of Potash directly with concentrated nitric acid or other strong oxidizing agents in a storage environment as this could potentially lead to unstable and hazardous chemical reactions.",
+      "Thoroughly wash and rinse all mechanical application equipment with clean water immediately after use to prevent the highly corrosive nature of the chloride component from damaging the machinery.",
+      "Apply the calculated fertilizer dose across multiple, smaller applications when working with light, sandy soil profiles to minimize the risk of potassium leaching below the active root zone during heavy irrigation."
+    ],
+    "expected_benefit": [
+      "Significantly enhances the crop's internal systemic resistance to a wide variety of diseases and pest infestations by fortifying the physical cellular barriers and optimizing metabolic health throughout the season.",
+      "Markedly improves the plant's overall drought tolerance and water-use efficiency by regulating stomatal opening and closing, which is essential for survival during periods of limited moisture availability.",
+      "Consistently results in much heavier, denser, and more vibrantly colored fruits and grains, enhancing the visual appeal and the final nutritional value for both wholesale and consumer market segments.",
+      "Provides for a significantly better crop storage duration and improved transportability by strengthening the cell walls and reducing the rate of post-harvest physiological decay in the final produce.",
+      "Crucially enhances the activation of over sixty different plant enzymes that are vital for critical biological processes including photosynthesis, protein synthesis, and the translocation of sugars within the plant."
+    ]
+  },
+  "SSP": {
+    "code": "0-16-0",
+    "full_name": "Single Super Phosphate (SSP)",
+    "composition": {
+      "N": 0,
+      "P": 16,
+      "K": 0
+    },
+    "application_rate_per_acre": 50,
+    "cost_per_kg": 8,
+    "description": "Affordable source of phosphorus, sulphur, and calcium.",
+    "application_method": [
+      "Basal application",
+      "Field incorporation",
+      "Deep soil placement",
+      "Organic mix application"
+    ],
+    "application_timing": [
+      "Pre-sowing",
+      "Land preparation phase",
+      "Early root initiation",
+      "Autumn application for perennials"
+    ],
+    "secondary_nutrients": [
+      "Sulphur (11%), Calcium (19%)",
+      "High Calcium levels",
+      "Critical Sulphur supply",
+      "Multi-nutrient complex"
+    ],
+    "precautions": [
+      "Attempt to pre-mix the fertilizer with high-quality organic manure or compost before soil application to significantly enhance the overall phosphorus uptake efficiency and minimize soil fixation in complex profiles.",
+      "Avoid use in exceptionally alkaline (sodic) soil types where the high ph-levels can rapidly cause the phosphorus component to become chemically unavailable to the crop's root system for an extended period.",
+      "Focus on immediate mechanical incorporation into the soil profile after broadcasting to prevent the primary phosphorus molecules from becoming permanently fixed on the soil surface away from the plant roots.",
+      "Strictly avoid mixing Single Super Phosphate with Urea in common storage bags for long periods as the resulting chemical interaction can cause severe caking and moisture-related breakdown of the granules.",
+      "Always prioritize the use of this fertilizer based on recent, professional soil-test laboratory results to prevent over-application of phosphorus and maintain a healthy and sustainable soil nutrient balance."
+    ],
+    "expected_benefit": [
+      "Provides a reliable, slow-release source of essential phosphorus that supports long-term root health and development throughout the entire duration of the agricultural season from sowing to harvest.",
+      "Offers an exceptionally cost-effective way to replenish soil sulphur levels, which is a key agronomic factor in maximizing the productivity and overall nutrient-use efficiency of the modern cropping system.",
+      "Actively improves the physical structure of the soil over time through the significant addition of calcium, leading to better soil aeration, improved water drainage, and a more favorable microbial environment.",
+      "Demonstrates a proven ability to boost the final oil concentration and fatty acid profile in oilseed crops like mustard, groundnut, and sunflower, which increases the final economic value of the harvest.",
+      "Specifically stimulates the vital process of root nodule formation in leguminous plants, thereby enhancing the crop's natural ability to fix atmospheric nitrogen and improve long-term soil fertility naturally."
+    ]
+  },
+  "Ammonium Sulphate": {
+    "code": "21-0-0",
+    "full_name": "Ammonium Sulphate (21:0:0)",
+    "composition": {
+      "N": 21,
+      "P": 0,
+      "K": 0
+    },
+    "application_rate_per_acre": 45,
+    "cost_per_kg": 7,
+    "description": "Excellent nitrogen source that also provides essential sulphur.",
+    "application_method": [
+      "Top dressing",
+      "Broadcasting over paddy",
+      "Placement in moist soil",
+      "Dissolved irrigation"
+    ],
+    "application_timing": [
+      "Starter fertilizer stage",
+      "Active tillering",
+      "Sulphur deficiency window",
+      "Early growth surge"
+    ],
+    "secondary_nutrients": [
+      "Sulphur (24%)",
+      "Ammonium Nitrogen",
+      "Sulphur-rich formula",
+      "Trace nutrients"
+    ],
+    "precautions": [
+      "Stay proactively aware that consistent long-term use of this fertilizer may noticeably increase soil acidity levels, and plan for regular ph-monitoring and corrective management strategies as needed for your specific site.",
+      "In regions with already acidic soil profiles, it is critical to use Ammonium Sulphate in conjunction with lime-based corrections to prevent the soil ph from dropping below the optimal range for crop development.",
+      "Avoid broadcasting granules onto highly calcareous or high-calcium soils where a chemical reaction can lead to the rapid loss of nitrogen through ammonia volatilization into the atmosphere.",
+      "Focus on achieving a high degree of uniformity during the broadcasting or drilling process to prevent localized high-salt 'hot spots' that could potentially damage the root hairs and young plant tissues.",
+      "If broadcasting over a wet crop canopy, it is strongly advised to wash the granules off the leaf surfaces using irrigation water to prevent localized osmotic leaf tissue burn and possible chlorotic spotting."
+    ],
+    "expected_benefit": [
+      "Facilitates the immediate and rapid correction of acute sulphur deficiency symptoms in the field, restoring the plant's metabolic health and overall growth vigor within a very short observation window.",
+      "Provides a significantly more steady and reliable supply of nitrogen to the root zone, as the ammonium form is less prone to leaching losses compared to nitrate-based fertilizer sources in some soils.",
+      "Aims to enhance the natural aroma and complex flavor profile in specialty crops such as onions, garlic, and certain cruciferous vegetables by providing the necessary sulfur for secondary metabolite production.",
+      "Exhibits a much lower rate of nitrogen loss through volatilization compared to Urea when applied correctly, ensuring that a higher percentage of the total applied nitrogen is available for crop uptake.",
+      "Aggressively promotes and supports the critical tillering and stooling phases in intensive sugarcane and paddy cultivation, leading to more productive shoots and a higher total potential yield at harvest."
+    ]
+  }
+}

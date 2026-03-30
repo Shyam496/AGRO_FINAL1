@@ -1,0 +1,214 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  password      String
+  firstName     String
+  lastName      String
+  phoneNumber   String?
+  location      String?
+  role          String    @default("farmer") // farmer, officer, admin
+  isVerified    Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  farms         Farm[]
+  tasks         Task[]
+  expenses      Expense[]
+  chatSessions  ChatSession[]
+}
+
+model Farm {
+  id            String    @id @default(uuid())
+  userId        String
+  name          String
+  area          Float     // in acres
+  location      String
+  soilType      String
+  coordinates   String?     // {lat, lng}
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  crops         Crop[]
+  soilTests     SoilTest[]
+}
+
+model Crop {
+  id            String    @id @default(uuid())
+  farmId        String
+  cropName      String
+  variety       String?
+  sowingDate    DateTime
+  expectedHarvest DateTime?
+  status        String    @default("growing") // growing, harvested, failed
+  area          Float     // in acres
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  farm          Farm      @relation(fields: [farmId], references: [id], onDelete: Cascade)
+  diseases      DiseaseDetection[]
+  fertilizers   FertilizerApplication[]
+}
+
+model Disease {
+  id            String    @id @default(uuid())
+  name          String    @unique
+  scientificName String?
+  cropType      String
+  symptoms      String      // array of symptoms
+  treatment     String      // treatment recommendations
+  severity      String    // low, medium, high
+  prevention    String      // prevention tips
+  imageUrls     String?     // sample disease images
+  createdAt     DateTime  @default(now())
+  
+  detections    DiseaseDetection[]
+}
+
+model DiseaseDetection {
+  id            String    @id @default(uuid())
+  cropId        String
+  diseaseId     String?
+  imageUrl      String
+  confidence    Float
+  symptoms      String?
+  detectedAt    DateTime  @default(now())
+  status        String    @default("detected") // detected, treating, resolved
+  
+  crop          Crop      @relation(fields: [cropId], references: [id], onDelete: Cascade)
+  disease       Disease?  @relation(fields: [diseaseId], references: [id])
+}
+
+model SoilTest {
+  id            String    @id @default(uuid())
+  farmId        String
+  nitrogen      Float
+  phosphorus    Float
+  potassium     Float
+  pH            Float
+  organicCarbon Float?
+  moisture      Float?
+  testDate      DateTime  @default(now())
+  
+  farm          Farm      @relation(fields: [farmId], references: [id], onDelete: Cascade)
+  recommendations FertilizerRecommendation[]
+}
+
+model Fertilizer {
+  id            String    @id @default(uuid())
+  name          String
+  type          String    // organic, inorganic
+  npkRatio      String    // e.g., "10-26-26"
+  nitrogen      Float
+  phosphorus    Float
+  potassium     Float
+  price         Float?
+  manufacturer  String?
+  
+  applications  FertilizerApplication[]
+  recommendations FertilizerRecommendation[]
+}
+
+model FertilizerRecommendation {
+  id            String    @id @default(uuid())
+  soilTestId    String
+  fertilizerId  String
+  quantity      Float     // in kg
+  applicationMethod String
+  timing        String
+  createdAt     DateTime  @default(now())
+  
+  soilTest      SoilTest  @relation(fields: [soilTestId], references: [id], onDelete: Cascade)
+  fertilizer    Fertilizer @relation(fields: [fertilizerId], references: [id])
+}
+
+model FertilizerApplication {
+  id            String    @id @default(uuid())
+  cropId        String
+  fertilizerId  String
+  quantity      Float
+  appliedDate   DateTime
+  cost          Float?
+  
+  crop          Crop      @relation(fields: [cropId], references: [id], onDelete: Cascade)
+  fertilizer    Fertilizer @relation(fields: [fertilizerId], references: [id])
+}
+
+model Scheme {
+  id            String    @id @default(uuid())
+  name          String
+  description   String
+  authority     String    // central, state, local
+  benefits      String
+  eligibility   String
+  documents     String
+  applicationLink String?
+  startDate     DateTime?
+  endDate       DateTime?
+  isActive      Boolean   @default(true)
+  createdAt     DateTime  @default(now())
+}
+
+model Task {
+  id            String    @id @default(uuid())
+  userId        String
+  title         String
+  description   String?
+  taskType      String    // sowing, irrigation, fertilizer, harvesting
+  dueDate       DateTime
+  status        String    @default("pending") // pending, completed, overdue
+  priority      String    @default("medium") // low, medium, high
+  reminderSent  Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+  
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Expense {
+  id            String    @id @default(uuid())
+  userId        String
+  category      String    // seeds, fertilizer, labor, equipment
+  amount        Float
+  description   String?
+  date          DateTime  @default(now())
+  
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Weather {
+  id            String    @id @default(uuid())
+  location      String
+  date          DateTime
+  temperature   Float
+  humidity      Float
+  rainfall      Float
+  windSpeed     Float
+  condition     String
+  forecast      String?
+  advisory      String?
+  createdAt     DateTime  @default(now())
+  
+  @@unique([location, date])
+}
+
+model ChatSession {
+  id            String    @id @default(uuid())
+  userId        String
+  messages      String      // array of {role, content, timestamp}
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
