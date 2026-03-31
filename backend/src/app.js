@@ -51,7 +51,9 @@ app.use(express.json({ limit: '10mb' }))
 app.use(express.urlencoded({ extended: true, limit: '10mb' }))
 
 // Static files
-app.use('/uploads', express.static(path.join(__dirname, '../uploads')))
+const isVercel = process.env.VERCEL || process.env.NODE_ENV === 'production'
+const uploadsDir = isVercel ? '/tmp/uploads' : path.join(__dirname, '../uploads')
+app.use('/uploads', express.static(uploadsDir))
 
 // Rate limiting
 app.use('/api/', rateLimiter)

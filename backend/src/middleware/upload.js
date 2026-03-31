@@ -7,9 +7,14 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 // Ensure uploads directory exists
-const uploadsDir = path.join(__dirname, '../../uploads')
+const isVercel = process.env.VERCEL || process.env.NODE_ENV === 'production'
+const uploadsDir = isVercel ? '/tmp/uploads' : path.join(__dirname, '../../uploads')
 if (!fs.existsSync(uploadsDir)) {
-    fs.mkdirSync(uploadsDir, { recursive: true })
+    try {
+        fs.mkdirSync(uploadsDir, { recursive: true })
+    } catch (e) {
+        console.warn("Could not create uploads directory:", e.message)
+    }
 }
 
 // Configure storage
