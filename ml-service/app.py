@@ -638,6 +638,7 @@ def predict():
             # If validation score <= 0.5, it's NOT a plant
             if validation_score <= 0.5:
                 confidence_not_plant = float(1 - validation_score)
+                print(f"❌ [VALIDATOR] Image REJECTED. Score: {validation_score:.4f} (Threshold: 0.5). Confidence its not a plant: {confidence_not_plant*100:.1f}%")
                 
                 # Update rejection statistics
                 validation_stats['rejected_images'] += 1

@@ -9,33 +9,57 @@ const prisma = new PrismaClient()
  * @access  Private
  */
 export const getOverview = asyncHandler(async (req, res) => {
-    // Get user's farms and crops
-    const farms = await prisma.farm.findMany({
-        where: { userId: req.user.id },
-        include: {
-            crops: {
-                include: {
-                    diseases: {
-                        where: { status: 'detected' }
+    let farms = []
+    let tasks = []
+    let expenses = []
+
+    try {
+        // Get user's farms and crops
+        farms = await prisma.farm.findMany({
+            where: { userId: req.user.id },
+            include: {
+                crops: {
+                    include: {
+                        diseases: {
+                            where: { status: 'detected' }
+                        }
                     }
                 }
             }
-        }
-    })
+        })
 
-    // Get tasks
-    const tasks = await prisma.task.findMany({
-        where: { userId: req.user.id },
-        orderBy: { dueDate: 'asc' },
-        take: 10
-    })
+        // Get tasks
+        tasks = await prisma.task.findMany({
+            where: { userId: req.user.id },
+            orderBy: { dueDate: 'asc' },
+            take: 10
+        })
 
-    // Get expenses
-    const expenses = await prisma.expense.findMany({
-        where: { userId: req.user.id },
-        orderBy: { date: 'desc' },
-        take: 10
-    })
+        // Get expenses
+        expenses = await prisma.expense.findMany({
+            where: { userId: req.user.id },
+            orderBy: { date: 'desc' },
+            take: 10
+        })
+    } catch (dbError) {
+        console.warn('⚠️ Database not available, providing demo dashboard data.')
+        // Fallback data for demo
+        return res.json({
+            overview: {
+                totalFarms: 1,
+                totalCrops: 3,
+                cropHealth: { healthy: 2, diseased: 1, total: 3 },
+                pendingTasks: 4,
+                totalExpenses: 12500
+            },
+            recentTasks: [
+                { id: '1', title: 'Irrigation', dueDate: new Date().toISOString(), status: 'pending', priority: 'High' },
+                { id: '2', title: 'Fertilization', dueDate: new Date().toISOString(), status: 'pending', priority: 'Medium' }
+            ],
+            recentExpenses: [],
+            isDemoData: true
+        })
+    }
 
     // Calculate statistics
     const totalCrops = farms.reduce((sum, farm) => sum + farm.crops.length, 0)

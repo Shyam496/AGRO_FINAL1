@@ -19,6 +19,7 @@ export default function DiseasePage() {
 
     // Non-plant error state
     const [isNotPlant, setIsNotPlant] = useState(false)
+    const [analysisSuggestions, setAnalysisSuggestions] = useState([])
 
     useEffect(() => {
         if (!authLoading && !isAuthenticated) {
@@ -64,14 +65,21 @@ export default function DiseasePage() {
 
         setImageAnalyzing(true)
         setIsNotPlant(false)
+        setAnalysisSuggestions([])
+        
         try {
             const result = await predictFromImage(selectedImage)
             setImageResult(result.prediction)
             toast.success('Analysis completed!')
         } catch (error) {
+            console.error('Frontend Catch:', error)
             const errorMessage = error.message.toLowerCase()
-            if (errorMessage.includes('not a plant') || errorMessage.includes('does not appear to be')) {
+            
+            if (error.isInvalidImage || 
+                errorMessage.includes('not a plant') || 
+                errorMessage.includes('does not appear to be')) {
                 setIsNotPlant(true)
+                setAnalysisSuggestions(error.suggestions || [])
                 setImageResult(null)
             } else {
                 toast.error(error.message || 'Analysis failed')
@@ -219,10 +227,26 @@ export default function DiseasePage() {
                                         <div className="w-24 h-24 bg-red-50 rounded-full flex items-center justify-center mb-6 border-2 border-red-100">
                                             <XCircle className="w-12 h-12 text-red-500" />
                                         </div>
-                                        <h3 className="text-red-600 font-black text-2xl mb-2">Not the plant image</h3>
-                                        <p className="text-gray-600 max-w-sm">
-                                            The model could not identify a plant in this image. Please upload a clear photo of your crop.
+                                        <h3 className="text-red-600 font-black text-2xl mb-2">Image Not Recognized</h3>
+                                        <p className="text-gray-600 max-w-sm mb-6">
+                                            The model could not identify a plant or crop in this image.
                                         </p>
+                                        
+                                        {analysisSuggestions.length > 0 && (
+                                            <div className="text-left bg-gray-50 p-4 rounded-xl border border-gray-200 w-full max-w-sm">
+                                                <h4 className="text-xs uppercase text-gray-400 font-bold mb-3 flex items-center gap-2">
+                                                    <Info className="w-4 h-4" /> Suggestions to fix:
+                                                </h4>
+                                                <ul className="space-y-2">
+                                                    {analysisSuggestions.map((suggestion, i) => (
+                                                        <li key={i} className="text-sm text-gray-700 flex gap-2">
+                                                            <span className="text-primary-500 font-bold">•</span>
+                                                            {suggestion}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
                                     </div>
                                 )}
 

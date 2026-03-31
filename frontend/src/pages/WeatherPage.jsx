@@ -5,6 +5,8 @@ import Sidebar from '../components/common/Sidebar'
 import { Cloud, Droplets, Wind, Eye, MapPin, Search, Loader, CloudRain, CloudSnow, Sun, Leaf, AlertTriangle, AlertCircle, CheckCircle, Droplet } from 'lucide-react'
 import api from '../services/api'
 
+const MOCK_MODE = false // Toggle for standalone demo
+
 export default function WeatherPage() {
     const { isAuthenticated, loading: authLoading } = useAuth()
     const navigate = useNavigate()
@@ -27,6 +29,38 @@ export default function WeatherPage() {
     const fetchWeatherByCity = async (cityName) => {
         setLoading(true)
         setError(null)
+
+        if (MOCK_MODE) {
+            await new Promise(resolve => setTimeout(resolve, 800))
+            const mockWeather = {
+                temperature: 28,
+                description: 'Partly Cloudy',
+                humidity: 65,
+                wind_speed: 12,
+                visibility: 10,
+                location: cityName
+            }
+            setCurrentWeather(mockWeather)
+            setCity(cityName)
+            setForecast([
+                { day: 'Mon', temp_max: 30, temp_min: 22, condition: 'Sunny', rainfall: 0 },
+                { day: 'Tue', temp_max: 29, temp_min: 21, condition: 'Partly Cloudy', rainfall: 0 },
+                { day: 'Wed', temp_max: 27, temp_min: 23, condition: 'Cloudy', rainfall: 2 },
+                { day: 'Thu', temp_max: 26, temp_min: 22, condition: 'Rain', rainfall: 15 },
+                { day: 'Fri', temp_max: 28, temp_min: 21, condition: 'Partly Cloudy', rainfall: 0 },
+                { day: 'Sat', temp_max: 31, temp_min: 23, condition: 'Sunny', rainfall: 0 },
+                { day: 'Sun', temp_max: 32, temp_min: 24, condition: 'Sunny', rainfall: 0 }
+            ])
+            setAdvisory({
+                irrigation: { title: 'Irrigation', status: 'Optimal', status_type: 'success', message: 'Ideal conditions for irrigation today.' },
+                harvesting: { title: 'Harvesting', status: 'Caution', status_type: 'warning', message: 'Rain expected on Thursday, plan accordingly.' },
+                spraying: { title: 'Spraying', status: 'Optimal', status_type: 'success', message: 'Low wind speeds make this a good time to spray.' },
+                activities: ['Apply top-dressing fertilizer', 'Check for early signs of pests', 'Clean irrigation channels'],
+                alerts: []
+            })
+            setLoading(false)
+            return
+        }
 
         try {
             // Get current weather via backend proxy

@@ -75,7 +75,8 @@ app.use('/api/tasks', taskRoutes)
 // ML Service Proxy
 app.use('/api/ml', async (req, res) => {
     try {
-        const mlUrl = `http://localhost:5001/api/ml${req.path}`
+        const mlServiceUrl = process.env.ML_SERVICE_URL || 'http://localhost:5001'
+        const mlUrl = `${mlServiceUrl}/api/ml${req.path}`
         const response = await axios({
             method: req.method,
             url: mlUrl,

@@ -1,6 +1,6 @@
 import api from './api'
 
-// Mock mode - set to false to use real ML service
+// Mock mode - set to true for standalone demo (no ML service needed)
 const MOCK_MODE = false
 
 // Mock disease database
@@ -243,13 +243,21 @@ export const predictFromImage = async (imageFile, cropId = null) => {
         console.error('Disease analysis error:', error)
 
         // Handle error responses from backend
-        const errorMessage = error.response?.data?.message || error.message || ''
+        const errorData = error.response?.data?.prediction || {}
+        const errorMessage = errorData.error || error.response?.data?.message || error.message || ''
         const lowerMessage = errorMessage.toLowerCase()
 
         if (lowerMessage.includes('not a plant') ||
             lowerMessage.includes('invalid image') ||
-            lowerMessage.includes('not appear to be')) {
-            throw new Error(errorMessage)
+            lowerMessage.includes('not appear to be') ||
+            errorData.isInvalidImage) {
+            
+            // Create a custom error object that includes validation details
+            const validationError = new Error(errorMessage)
+            validationError.isInvalidImage = true
+            validationError.suggestions = errorData.suggestions || []
+            validationError.validation = errorData.validation || null
+            throw validationError
         }
 
         throw new Error('Failed to analyze image. Please ensure ML service is running.')

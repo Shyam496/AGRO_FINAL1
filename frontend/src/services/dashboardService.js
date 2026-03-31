@@ -1,6 +1,6 @@
 import api from './api'
 
-// Mock mode - works without backend
+// Mock mode - set to true for standalone demo
 const MOCK_MODE = false
 
 // Mock dashboard data

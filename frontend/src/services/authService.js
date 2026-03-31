@@ -1,6 +1,6 @@
 import api from './api'
 
-// Mock mode - works without backend
+// Mock mode - set to true for standalone demo (no backend needed)
 const MOCK_MODE = false
 
 // Mock user data

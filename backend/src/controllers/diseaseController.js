@@ -42,24 +42,40 @@ export const predictFromImage = asyncHandler(async (req, res) => {
         console.log('ML Service response:', prediction)
     } catch (error) {
         console.error('ML Service Error (Disease):', error.message)
+        
+        // Extract detailed error from ML service if available
+        const mlError = error.response?.data?.error || error.response?.data?.message || error.message
+        const mlData = error.response?.data || {}
+
         // Fallback to mock for demo stability if ML service is down
         prediction = mockDiseasePredict(imageUrl)
         prediction.isMock = true
-        prediction.error = error.message
+        prediction.error = mlError
+        
+        // Preserve validation flags if it was a rejection (status 400)
+        if (error.response?.status === 400) {
+            prediction.isInvalidImage = mlData.isInvalidImage || false
+            prediction.validation = mlData.validation || null
+            prediction.suggestions = mlData.suggestions || []
+        }
     }
 
     // Save detection to database (if crop ID provided)
     if (req.body.cropId) {
-        await prisma.diseaseDetection.create({
-            data: {
-                cropId: req.body.cropId,
-                diseaseId: prediction.diseaseId || prediction.class,
-                imageUrl,
-                confidence: prediction.confidence || 0,
-                symptoms: prediction.symptoms ? JSON.stringify(prediction.symptoms) : null,
-                status: 'detected'
-            }
-        })
+        try {
+            await prisma.diseaseDetection.create({
+                data: {
+                    cropId: req.body.cropId,
+                    diseaseId: prediction.diseaseId || prediction.class,
+                    imageUrl,
+                    confidence: prediction.confidence || 0,
+                    symptoms: prediction.symptoms ? JSON.stringify(prediction.symptoms) : null,
+                    status: 'detected'
+                }
+            })
+        } catch (dbError) {
+            console.warn('⚠️ Database not available, skipping detection log save.')
+        }
     }
 
     res.json({

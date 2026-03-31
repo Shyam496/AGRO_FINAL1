@@ -11,7 +11,7 @@ const prisma = new PrismaClient()
 const generateToken = (userId) => {
     return jwt.sign(
         { userId },
-        process.env.JWT_SECRET,
+        process.env.JWT_SECRET || 'agromind-demo-secret-key-12345',
         { expiresIn: process.env.JWT_EXPIRES_IN || '7d' }
     )
 }
@@ -93,6 +93,28 @@ export const login = asyncHandler(async (req, res) => {
         return res.status(400).json({
             error: 'Validation error',
             message: 'Please provide email and password'
+        })
+    }
+
+    // Demo Mode Bypass
+    if (email === 'farmer@agromind.com' && password === 'password123') {
+        const demoUser = {
+            id: 'demo-user-123',
+            email: 'farmer@agromind.com',
+            firstName: 'Rajesh',
+            lastName: 'Kumar',
+            phoneNumber: '+91 98765 43210',
+            location: 'Punjab, India',
+            role: 'farmer',
+            createdAt: new Date().toISOString()
+        }
+        
+        const token = generateToken(demoUser.id)
+        
+        return res.json({
+            message: 'Login successful (Demo Mode)',
+            user: demoUser,
+            token
         })
     }
 

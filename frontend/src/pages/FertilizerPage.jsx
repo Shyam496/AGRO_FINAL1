@@ -5,6 +5,8 @@ import Sidebar from '../components/common/Sidebar'
 import { Droplet, Calculator, FileText, Loader, Clock, Sparkles, ShieldAlert, Upload, ClipboardCheck, ChevronDown, XCircle } from 'lucide-react'
 import api from '../services/api'
 
+const MOCK_MODE = false // Toggle for standalone demo
+
 export default function FertilizerPage() {
     const { isAuthenticated, loading: authLoading } = useAuth()
     const navigate = useNavigate()
@@ -44,6 +46,12 @@ export default function FertilizerPage() {
     }, [isAuthenticated, authLoading, navigate])
 
     const fetchMetadata = async () => {
+        if (MOCK_MODE) {
+            setCrops(['Rice', 'Maize', 'Chickpea', 'Kidneybeans', 'Pigeonpeas', 'Mothbeans', 'Mungbean', 'Blackgram', 'Lentil', 'Pomegranate', 'Banana', 'Mango', 'Grapes', 'Watermelon', 'Muskmelon', 'Apple', 'Orange', 'Papaya', 'Coconut', 'Cotton', 'Jute', 'Coffee'])
+            setSoilTypes(['Loamy', 'Black', 'Red', 'Silty', 'Clayey'])
+            setLandUnits(['acre', 'hectare', 'cent', 'ground'])
+            return
+        }
         try {
             const response = await api.get('/fertilizer/info')
             const data = response.data
@@ -127,6 +135,25 @@ export default function FertilizerPage() {
         setLoading(true)
         setError(null)
         setResult(null)
+
+        if (MOCK_MODE) {
+            await new Promise(resolve => setTimeout(resolve, 1500))
+            const mockResult = {
+                display_name: 'Urea (46-0-0)',
+                fertilizerName: 'Urea (46-0-0)',
+                quantity: { total_kg: 150 },
+                confidence: 0.92,
+                composition: { N: 46, P: 0, K: 0 },
+                application_timing: 'Morning or Evening',
+                application_method: 'Broadcasting',
+                precautions: ['Use gloves during application', 'Avoid applying in heavy wind', 'Keep away from water bodies'],
+                expected_benefit: ['Increased leaf growth', 'Enhanced protein content'],
+                cost: { total: 1200 }
+            }
+            setResult(mockResult)
+            setLoading(false)
+            return
+        }
 
         try {
             const response = await api.post('/fertilizer/recommend', {

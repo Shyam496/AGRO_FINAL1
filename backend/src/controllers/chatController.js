@@ -20,20 +20,25 @@ export const sendMessage = asyncHandler(async (req, res) => {
     }
 
     // Get or create chat session
-    let session
-    if (sessionId) {
-        session = await prisma.chatSession.findUnique({
-            where: { id: sessionId }
-        })
-    }
+    let session = null
+    try {
+        if (sessionId) {
+            session = await prisma.chatSession.findUnique({
+                where: { id: sessionId }
+            })
+        }
 
-    if (!session) {
-        session = await prisma.chatSession.create({
-            data: {
-                userId: req.user.id,
-                messages: JSON.stringify([])
-            }
-        })
+        if (!session) {
+            session = await prisma.chatSession.create({
+                data: {
+                    userId: req.user.id,
+                    messages: JSON.stringify([])
+                }
+            })
+        }
+    } catch (dbError) {
+        console.warn('⚠️ Database not available, using temporary session.')
+        session = { id: sessionId || 'temp-session-' + Date.now(), messages: JSON.stringify([]) }
     }
 
     // Get real AI response from Gemini with Context
@@ -55,13 +60,19 @@ export const sendMessage = asyncHandler(async (req, res) => {
     }
     ]
 
-    await prisma.chatSession.update({
-        where: { id: session.id },
-        data: {
-            messages: JSON.stringify(updatedMessages),
-            updatedAt: new Date()
+    try {
+        if (session.id && !session.id.startsWith('temp-')) {
+            await prisma.chatSession.update({
+                where: { id: session.id },
+                data: {
+                    messages: JSON.stringify(updatedMessages),
+                    updatedAt: new Date()
+                }
+            })
         }
-    })
+    } catch (dbError) {
+        console.warn('⚠️ Could not save chat history to database.')
+    }
 
     res.json({
         message: 'Message sent successfully',
