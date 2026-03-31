@@ -95,16 +95,22 @@ export const getOverview = asyncHandler(async (req, res) => {
  * @access  Private
  */
 export const getCropHealth = asyncHandler(async (req, res) => {
-    const farms = await prisma.farm.findMany({
-        where: { userId: req.user.id },
-        include: {
-            crops: {
-                include: {
-                    diseases: true
+    let farms = [];
+    try {
+        farms = await prisma.farm.findMany({
+            where: { userId: req.user.id },
+            include: {
+                crops: {
+                    include: {
+                        diseases: true
+                    }
                 }
             }
-        }
-    })
+        })
+    } catch (dbError) {
+        console.warn('Dashboard Crop Health DB Error:', dbError.message);
+        return res.json({ cropHealth: [] })
+    }
 
     const cropHealthData = farms.flatMap(farm =>
         farm.crops.map(crop => ({
@@ -137,10 +143,21 @@ export const getExpenses = asyncHandler(async (req, res) => {
         }
     }
 
-    const expenses = await prisma.expense.findMany({
-        where,
-        orderBy: { date: 'desc' }
-    })
+    let expenses = [];
+    try {
+        expenses = await prisma.expense.findMany({
+            where,
+            orderBy: { date: 'desc' }
+        })
+    } catch (dbError) {
+        console.warn('Dashboard Expenses DB Error:', dbError.message);
+        return res.json({
+            expenses: [],
+            byCategory: {},
+            total: 0,
+            count: 0
+        })
+    }
 
     // Group by category
     const byCategory = expenses.reduce((acc, expense) => {

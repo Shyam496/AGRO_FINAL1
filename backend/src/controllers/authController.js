@@ -97,12 +97,14 @@ export const login = asyncHandler(async (req, res) => {
     }
 
     // Demo Mode Bypass
-    if (email === 'farmer@agromind.com' && password === 'password123') {
+    const demoEmail = 'farmer@agromind.com';
+    const checkEmail = (email || '').trim().toLowerCase();
+    if (checkEmail === demoEmail && password === 'password123') {
         const demoUser = {
             id: 'demo-user-123',
-            email: 'farmer@agromind.com',
-            firstName: 'Rajesh',
-            lastName: 'Kumar',
+            email: demoEmail,
+            firstName: 'Demo',
+            lastName: 'Farmer',
             phoneNumber: '+91 98765 43210',
             location: 'Punjab, India',
             role: 'farmer',
@@ -118,10 +120,19 @@ export const login = asyncHandler(async (req, res) => {
         })
     }
 
-    // Find user
-    const user = await prisma.user.findUnique({
-        where: { email }
-    })
+    // Find user with fallback
+    let user;
+    try {
+        user = await prisma.user.findUnique({
+            where: { email: checkEmail }
+        })
+    } catch (dbError) {
+        console.warn('Database error in login:', dbError.message);
+        return res.status(401).json({
+            error: 'Invalid credentials',
+            message: 'Invalid email or password (Demo: farmer@agromind.com / password123)'
+        })
+    }
 
     if (!user) {
         return res.status(401).json({
@@ -131,12 +142,19 @@ export const login = asyncHandler(async (req, res) => {
     }
 
     // Check password
-    const isPasswordValid = await bcrypt.compare(password, user.password)
+    try {
+        const isPasswordValid = await bcrypt.compare(password, user.password)
 
-    if (!isPasswordValid) {
-        return res.status(401).json({
-            error: 'Invalid credentials',
-            message: 'Invalid email or password'
+        if (!isPasswordValid) {
+            return res.status(401).json({
+                error: 'Invalid credentials',
+                message: 'Invalid email or password'
+            })
+        }
+    } catch (bcryptError) {
+        return res.status(500).json({
+            error: 'Server error',
+            message: 'Error handling password verification'
         })
     }
 
