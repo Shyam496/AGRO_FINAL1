@@ -260,7 +260,7 @@ export const predictFromImage = async (imageFile, cropId = null) => {
             throw validationError
         }
 
-        throw new Error('Failed to analyze image. Please ensure ML service is running.')
+        throw new Error(`Failed to analyze image: ${errorMessage}`)
     }
 }
 
