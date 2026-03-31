@@ -12,7 +12,8 @@
         "seed": "node src/prisma/seed.js",
         "studio": "npx prisma studio",
         "test": "jest",
-        "test:watch": "jest --watch"
+        "test:watch": "jest --watch",
+        "postinstall": "npx prisma generate"
     },
     "keywords": [
         "agriculture",
