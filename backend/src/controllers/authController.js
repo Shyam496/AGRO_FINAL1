@@ -159,24 +159,35 @@ export const login = asyncHandler(async (req, res) => {
  * @access  Private
  */
 export const getProfile = asyncHandler(async (req, res) => {
-    const user = await prisma.user.findUnique({
-        where: { id: req.user.id },
-        select: {
-            id: true,
-            email: true,
-            firstName: true,
-            lastName: true,
-            phoneNumber: true,
-            location: true,
-            role: true,
-            isVerified: true,
-            createdAt: true,
-            updatedAt: true
-        }
-    })
+    let user;
+    try {
+        user = await prisma.user.findUnique({
+            where: { id: req.user.id },
+            select: {
+                id: true,
+                email: true,
+                firstName: true,
+                lastName: true,
+                phoneNumber: true,
+                location: true,
+                role: true,
+                isVerified: true,
+                createdAt: true,
+                updatedAt: true
+            }
+        });
+    } catch (e) {
+        console.warn("Database error in getProfile, using session user:", e.message);
+    }
+    
+    // Fallback to the user populated by the auth middleware if the DB is unreachabe
+    if (!user) {
+        user = req.user;
+    }
 
     res.json({ user })
 })
+
 
 /**
  * @route   PUT /api/auth/profile

@@ -21,7 +21,8 @@ export const auth = async (req, res, next) => {
         const token = authHeader.substring(7) // Remove 'Bearer ' prefix
 
         // Verify token
-        const decoded = jwt.verify(token, process.env.JWT_SECRET)
+        const JWT_SECRET_KEY = process.env.JWT_SECRET || 'agromind-demo-secret-key-12345'
+        const decoded = jwt.verify(token, JWT_SECRET_KEY)
 
         // Get user from database
         let user
@@ -127,7 +128,8 @@ export const optionalAuth = async (req, res, next) => {
 
         if (authHeader && authHeader.startsWith('Bearer ')) {
             const token = authHeader.substring(7)
-            const decoded = jwt.verify(token, process.env.JWT_SECRET)
+            const JWT_SECRET_KEY = process.env.JWT_SECRET || 'agromind-demo-secret-key-12345'
+            const decoded = jwt.verify(token, JWT_SECRET_KEY)
 
             const user = await prisma.user.findUnique({
                 where: { id: decoded.userId },
