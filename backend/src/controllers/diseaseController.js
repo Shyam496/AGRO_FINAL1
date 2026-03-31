@@ -33,7 +33,8 @@ export const predictFromImage = asyncHandler(async (req, res) => {
         console.log(`Sending image to ML service: ${ML_SERVICE_URL}/predict`)
         const response = await axios.post(`${ML_SERVICE_URL}/predict`, formData, {
             headers: {
-                ...formData.getHeaders()
+                ...formData.getHeaders(),
+                'Bypass-Tunnel-Reminder': 'true'
             },
             timeout: 30000 // ML prediction might take time
         })
@@ -154,23 +155,29 @@ export const getDiseaseDetails = asyncHandler(async (req, res) => {
  */
 export const getDetectionHistory = asyncHandler(async (req, res) => {
     // Get user's crops
-    const userFarms = await prisma.farm.findMany({
-        where: { userId: req.user.id },
-        include: {
-            crops: {
-                include: {
-                    diseases: {
-                        include: {
-                            disease: true
-                        },
-                        orderBy: {
-                            detectedAt: 'desc'
+    let userFarms = [];
+    try {
+        userFarms = await prisma.farm.findMany({
+            where: { userId: req.user.id },
+            include: {
+                crops: {
+                    include: {
+                        diseases: {
+                            include: {
+                                disease: true
+                            },
+                            orderBy: {
+                                detectedAt: 'desc'
+                            }
                         }
                     }
                 }
             }
-        }
-    })
+        });
+    } catch (dbError) {
+        console.warn('Disease History DB Error:', dbError.message);
+        return res.json({ detections: [] });
+    }
 
     const detections = userFarms.flatMap(farm =>
         farm.crops.flatMap(crop =>
