@@ -13,7 +13,7 @@
         "studio": "npx prisma studio",
         "test": "jest",
         "test:watch": "jest --watch",
-        "postinstall": "npx prisma generate"
+        "postinstall": "npx prisma generate --schema=./src/prisma/schema.prisma"
     },
     "keywords": [
         "agriculture",
