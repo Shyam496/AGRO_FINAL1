@@ -164,17 +164,24 @@ export default function FertilizerPage() {
                 pH: 6.5 // Default pH since it's not in the form but required by backend controller
             })
             const data = response.data
-            if (data.success || data.recommendation) {
-                // Adjust for backend response structure (it returns a 'recommendation' object)
+            if (data.recommendation) {
+                // Handle both ML service response (nested in .data) and mock fallback
                 const rec = data.recommendation
+                const mlData = rec.data || rec // ML service wraps inside .data
+
                 setResult({
-                    ...rec,
-                    display_name: rec.fertilizerName || rec.display_name,
-                    quantity: { total_kg: rec.quantity || rec.total_kg },
-                    composition: rec.composition || { N: 0, P: 0, K: 0 },
-                    application_timing: rec.timing || rec.application_timing,
-                    application_method: rec.method || rec.application_method,
-                    precautions: rec.precautions || []
+                    display_name: mlData.display_name || mlData.fertilizerName || rec.fertilizerName || 'Recommended Fertilizer',
+                    quantity: {
+                        total_kg: mlData.quantity?.total_kg || mlData.quantity || rec.quantity || 0
+                    },
+                    confidence: mlData.confidence || rec.confidence || 0,
+                    composition: mlData.composition || rec.composition || { N: 0, P: 0, K: 0 },
+                    application_timing: mlData.application_timing || rec.timing || '',
+                    application_method: mlData.application_method || rec.method || '',
+                    secondary_nutrients: mlData.secondary_nutrients || rec.secondary_nutrients || '',
+                    precautions: mlData.precautions || rec.precautions || [],
+                    expected_benefit: mlData.expected_benefit || mlData.application_instructions || rec.expected_benefit || [],
+                    cost: mlData.cost || rec.cost || null
                 })
             } else {
                 setError(data.error || 'Failed to get recommendation')
